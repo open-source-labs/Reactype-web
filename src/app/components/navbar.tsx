@@ -1,7 +1,6 @@
 'use client';
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
 import { Dialog } from '@headlessui/react';
@@ -28,7 +27,7 @@ export default function Navbar() {
 			>
 				<div className="flex lg:flex-1">
 					<a href="#" className="-m-1.5 p-1.5">
-						<span className="sr-only">Your Company</span>
+						<span className="sr-only">ReacType</span>
 						<Image
 							className="h-8 w-auto"
 							width={200}
