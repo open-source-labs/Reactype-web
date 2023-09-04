@@ -1,7 +1,6 @@
 'use client';
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
 import { Dialog } from '@headlessui/react';
