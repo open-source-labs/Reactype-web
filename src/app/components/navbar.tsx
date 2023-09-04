@@ -60,7 +60,7 @@ export default function Navbar() {
 				</div>
 				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 					<div className="flex gap-x-5 px-4 items-center">
-						<a href="">
+						<a href="https://github.com/open-source-labs/ReacType">
 							<Image
 								className="h-8 w-auto"
 								width={200}
@@ -69,7 +69,7 @@ export default function Navbar() {
 								alt="logo"
 							/>
 						</a>
-						<a href="">
+						<a href="https://www.linkedin.com/company/reactype">
 							<Image
 								className="h-8 w-auto"
 								width={200}
@@ -95,11 +95,6 @@ export default function Navbar() {
 					<div className="flex items-center justify-between">
 						<a href="#" className="-m-1.5 p-1.5">
 							<span className="sr-only">ReacType</span>
-							<Image
-								className="h-8 w-auto"
-								src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-								alt=""
-							/>
 						</a>
 						<button
 							type="button"
