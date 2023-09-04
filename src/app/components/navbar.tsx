@@ -5,12 +5,13 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 
 import { Fragment } from 'react';
 import Image from 'next/image';
+import logo from 'public/reactype.png';
 
 const navigation = [
-	{ name: 'Dashboard', href: '#', current: true },
-	{ name: 'Team', href: '#', current: false },
-	{ name: 'Projects', href: '#', current: false },
-	{ name: 'Calendar', href: '#', current: false },
+	{ name: 'Home', href: '/', current: true },
+	{ name: 'Tutorial', href: '/tutorial', current: false },
+	{ name: 'Download', href: '/#download', current: false },
+	{ name: 'Meet the team', href: '/#meettheteam', current: false },
 ];
 
 function classNames(...classes: (string | undefined | null | false)[]): string {
@@ -19,7 +20,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
 
 export default function Example() {
 	return (
-		<Disclosure as="nav" className="bg-gray-800">
+		<Disclosure as="nav">
 			{({ open }) => (
 				<>
 					<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -42,11 +43,11 @@ export default function Example() {
 										className="h-8 w-auto"
 										width={200}
 										height={200}
-										src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+										src={logo}
 										alt="Your Company"
 									/>
 								</div>
-								<div className="hidden sm:ml-6 sm:block">
+								<div className="hidden sm:ml-6 sm:block mx-auto">
 									<div className="flex space-x-4">
 										{navigation.map((item) => (
 											<a
@@ -71,9 +72,7 @@ export default function Example() {
 									type="button"
 									className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
 								>
-									<span className="absolute -inset-1.5" />
-									<span className="sr-only">View notifications</span>
-									<BellIcon className="h-6 w-6" aria-hidden="true" />
+									Get Started
 								</button>
 
 								{/* Profile dropdown */}
