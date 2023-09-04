@@ -2,9 +2,12 @@
 
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Fragment, useState } from 'react';
 
-import { Fragment } from 'react';
+import { Dialog } from '@headlessui/react';
 import Image from 'next/image';
+import github from 'public/github.svg';
+import linkedin from 'public/linkedin.svg';
 import logo from 'public/reactype.png';
 
 const navigation = [
@@ -14,153 +17,125 @@ const navigation = [
 	{ name: 'Meet the team', href: '/#meettheteam', current: false },
 ];
 
-function classNames(...classes: (string | undefined | null | false)[]): string {
-	return classes.filter(Boolean).join(' ');
-}
+export default function Navbar() {
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-export default function Example() {
 	return (
-		<Disclosure as="nav">
-			{({ open }) => (
-				<>
-					<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-						<div className="relative flex h-16 items-center justify-between">
-							<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-								{/* Mobile menu button*/}
-								<Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-									<span className="absolute -inset-0.5" />
-									<span className="sr-only">Open main menu</span>
-									{open ? (
-										<XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-									) : (
-										<Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-									)}
-								</Disclosure.Button>
-							</div>
-							<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-								<div className="flex flex-shrink-0 items-center">
-									<Image
-										className="h-8 w-auto"
-										width={200}
-										height={200}
-										src={logo}
-										alt="Your Company"
-									/>
-								</div>
-								<div className="hidden sm:ml-6 sm:block mx-auto">
-									<div className="flex space-x-4">
-										{navigation.map((item) => (
-											<a
-												key={item.name}
-												href={item.href}
-												className={classNames(
-													item.current
-														? 'bg-gray-900 text-white'
-														: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-													'rounded-md px-3 py-2 text-sm font-medium'
-												)}
-												aria-current={item.current ? 'page' : undefined}
-											>
-												{item.name}
-											</a>
-										))}
-									</div>
-								</div>
-							</div>
-							<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-								<button
-									type="button"
-									className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-								>
-									Get Started
-								</button>
-
-								{/* Profile dropdown */}
-								<Menu as="div" className="relative ml-3">
-									<div>
-										<Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-											<span className="absolute -inset-1.5" />
-											<span className="sr-only">Open user menu</span>
-										</Menu.Button>
-									</div>
-									<Transition
-										as={Fragment}
-										enter="transition ease-out duration-100"
-										enterFrom="transform opacity-0 scale-95"
-										enterTo="transform opacity-100 scale-100"
-										leave="transition ease-in duration-75"
-										leaveFrom="transform opacity-100 scale-100"
-										leaveTo="transform opacity-0 scale-95"
+		<div>
+			<nav
+				className="flex items-center justify-between p-6 lg:px-8"
+				aria-label="Global"
+			>
+				<div className="flex lg:flex-1">
+					<a href="#" className="-m-1.5 p-1.5">
+						<span className="sr-only">Your Company</span>
+						<Image
+							className="h-8 w-auto"
+							width={200}
+							height={200}
+							src={logo}
+							alt="logo"
+						/>
+					</a>
+				</div>
+				<div className="flex lg:hidden">
+					<button
+						type="button"
+						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+						onClick={() => setMobileMenuOpen(true)}
+					>
+						<span className="sr-only">Open main menu</span>
+						<Bars3Icon className="h-6 w-6" aria-hidden="true" />
+					</button>
+				</div>
+				<div className="hidden lg:flex lg:gap-x-12">
+					{navigation.map((item) => (
+						<a
+							key={item.name}
+							href={item.href}
+							className="text-sm font-semibold leading-6 text-gray-400"
+						>
+							{item.name}
+						</a>
+					))}
+				</div>
+				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
+					<div className="flex gap-x-5 px-4 items-center">
+						<a href="">
+							<Image
+								className="h-8 w-auto"
+								width={200}
+								height={200}
+								src={github}
+								alt="logo"
+							/>
+						</a>
+						<a href="">
+							<Image
+								className="h-8 w-auto"
+								width={200}
+								height={200}
+								src={linkedin}
+								alt="logo"
+							/>
+						</a>
+					</div>
+					<button className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#006f73] font-medium">
+						Get Started
+					</button>
+				</div>
+			</nav>
+			<Dialog
+				as="div"
+				className="lg:hidden"
+				open={mobileMenuOpen}
+				onClose={setMobileMenuOpen}
+			>
+				<div className="fixed inset-0 z-50" />
+				<Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+					<div className="flex items-center justify-between">
+						<a href="#" className="-m-1.5 p-1.5">
+							<span className="sr-only">Your Company</span>
+							<Image
+								className="h-8 w-auto"
+								src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+								alt=""
+							/>
+						</a>
+						<button
+							type="button"
+							className="-m-2.5 rounded-md p-2.5 text-gray-700"
+							onClick={() => setMobileMenuOpen(false)}
+						>
+							<span className="sr-only">Close menu</span>
+							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
+						</button>
+					</div>
+					<div className="mt-6 flow-root">
+						<div className="-my-6 divide-y divide-gray-500/10">
+							<div className="space-y-2 py-6">
+								{navigation.map((item) => (
+									<a
+										key={item.name}
+										href={item.href}
+										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
 									>
-										<Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-											<Menu.Item>
-												{({ active }) => (
-													<a
-														href="#"
-														className={classNames(
-															active ? 'bg-gray-100' : '',
-															'block px-4 py-2 text-sm text-gray-700'
-														)}
-													>
-														Your Profile
-													</a>
-												)}
-											</Menu.Item>
-											<Menu.Item>
-												{({ active }) => (
-													<a
-														href="#"
-														className={classNames(
-															active ? 'bg-gray-100' : '',
-															'block px-4 py-2 text-sm text-gray-700'
-														)}
-													>
-														Settings
-													</a>
-												)}
-											</Menu.Item>
-											<Menu.Item>
-												{({ active }) => (
-													<a
-														href="#"
-														className={classNames(
-															active ? 'bg-gray-100' : '',
-															'block px-4 py-2 text-sm text-gray-700'
-														)}
-													>
-														Sign out
-													</a>
-												)}
-											</Menu.Item>
-										</Menu.Items>
-									</Transition>
-								</Menu>
+										{item.name}
+									</a>
+								))}
+							</div>
+							<div className="py-6">
+								<a
+									href="#"
+									className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+								>
+									Log in
+								</a>
 							</div>
 						</div>
 					</div>
-
-					<Disclosure.Panel className="sm:hidden">
-						<div className="space-y-1 px-2 pb-3 pt-2">
-							{navigation.map((item) => (
-								<Disclosure.Button
-									key={item.name}
-									as="a"
-									href={item.href}
-									className={classNames(
-										item.current
-											? 'bg-gray-900 text-white'
-											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-										'block rounded-md px-3 py-2 text-base font-medium'
-									)}
-									aria-current={item.current ? 'page' : undefined}
-								>
-									{item.name}
-								</Disclosure.Button>
-							))}
-						</div>
-					</Disclosure.Panel>
-				</>
-			)}
-		</Disclosure>
+				</Dialog.Panel>
+			</Dialog>
+		</div>
 	);
 }
