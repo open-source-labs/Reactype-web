@@ -83,7 +83,7 @@ const Download: React.FC = () => {
 				</div>
 
 				<p className="mt-6 text-base text-center text-gray-600">
-					It takes only 2 minutes to setup on any device
+					It takes only 2 minutes to setup on your machine
 				</p>
 			</div>
 		</section>
