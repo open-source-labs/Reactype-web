@@ -24,12 +24,12 @@ const Hero = () => {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<a
-								href="#"
+								href="https://app.reactype.dev/#/login"
 								className="rounded-md bg-white px-6 py-3 text-lg  font-medium text-black shadow-sm"
 							>
 								Try Here
 							</a>
-							<a href="#" className="text-lg font-medium leading-6">
+							<a href="#download" className="text-lg font-medium leading-6">
 								Download <span aria-hidden="true">→</span>
 							</a>
 						</div>
