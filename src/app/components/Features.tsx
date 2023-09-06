@@ -53,7 +53,7 @@ const Features = () => {
 						<h3 className="mt-12 text-xl font-bold text-gray-100 font-pj">
 							Context Manager
 						</h3>
-						<p className="mt-5 text-base text-gray-600 font-pj">
+						<p className="mt-5 text-base text-gray-400 font-pj">
 							Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec,
 							proin faucibus nibh et sagittis a. Lacinia purus ac amet.
 						</p>
@@ -114,7 +114,7 @@ const Features = () => {
 						<h3 className="mt-12 text-xl font-bold text-gray-100 font-pj">
 							D3 Visualization
 						</h3>
-						<p className="mt-5 text-base text-gray-600 font-pj">
+						<p className="mt-5 text-base text-gray-400 font-pj">
 							Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec,
 							proin faucibus nibh et sagittis a. Lacinia purus ac amet.
 						</p>
@@ -166,7 +166,7 @@ const Features = () => {
 						<h3 className="mt-12 text-xl font-bold text-gray-100 font-pj">
 							Next.js and Gatsby.js
 						</h3>
-						<p className="mt-5 text-base text-gray-600 font-pj">
+						<p className="mt-5 text-base text-gray-400 font-pj">
 							Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec,
 							proin faucibus nibh et sagittis a. Lacinia purus ac amet.
 						</p>
