@@ -351,7 +351,7 @@ const sortedPeople = filterAndSortContributors(people);
 
 export default function Team() {
 	return (
-		<div className=" py-24 sm:py-32">
+		<div id="meettheteam" className=" py-24 sm:py-32">
 			<div className="mx-auto  max-w-7xl gap-x-8 gap-y-20 px-6">
 				<div className="my-10 ">
 					<h1 className="text-6xl font-bold text-left">Our Team</h1>

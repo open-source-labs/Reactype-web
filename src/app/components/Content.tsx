@@ -1,4 +1,5 @@
 import React from 'react';
+import blob from 'public/blob.svg';
 
 interface Features {
 	title: string;
@@ -23,17 +24,37 @@ const content: Features[] = [
 		alt: 'url',
 	},
 	{
-		title: 'Integrated CSS Editor with Live Demo',
+		title: 'Component Sharing',
 		paragraph:
-			'Copy & paste existing stylesheets or create live in the CSS Editor. As you create new instances and add styling, watch as your code dynamically renders a live demo.',
+			'Developers can now share and upload ready made components in the newly developed marketplace.',
 		image: 'url2',
 		alt: 'url',
 	},
 ];
 
 const Content: React.FC = () => {
+	const backgroundStyle: React.CSSProperties = {
+		backgroundImage: `url(${blob})`,
+		backgroundPosition: 'top', // Align the background image to the top
+		backgroundSize: 'cover',
+	};
+
 	return (
-		<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 space-y-16">
+		<div
+			className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 space-y-16 "
+			style={backgroundStyle}
+		>
+			<img src={blob} alt="" />
+			<div className="py-20 mx-auto max-w-2xl text-center margin-auto">
+				<h2 className=" text-4xl font-bold tracking-tight text-white sm:text-6xl">
+					Create Your React App
+				</h2>
+				<p className="mt-6 text-lg leading-8 text-gray-300">
+					ReacType is a prototyping tool that allows users to visualize their
+					application architecture dynamically, employing a drag-and-drop canvas
+					display and an interactive, real-time component code preview.
+				</p>
+			</div>
 			{content.map((item, index) => (
 				<div
 					key={index}
