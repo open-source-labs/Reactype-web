@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import React from 'react';
 import blob from 'public/blob.svg';
-
 interface Features {
 	title: string;
 	paragraph: string;
@@ -13,21 +13,21 @@ const content: Features[] = [
 		title: 'Live Code Preview',
 		paragraph:
 			'See your code preview update in real time as you build. React hooks are enabled for application lifecycle management. ',
-		image: 'url',
-		alt: 'url',
+		image: `/codepreview.png`,
+		alt: 'code-preview',
 	},
 	{
 		title: 'State Management',
 		paragraph:
 			'React Hooks are enabled to handle your state across components. Also, pass in props from a parent component with the click of a button!',
-		image: 'url2',
+		image: `/statemanagement.png`,
 		alt: 'url',
 	},
 	{
 		title: 'Component Sharing',
 		paragraph:
 			'Developers can now share and upload ready made components in the newly developed marketplace.',
-		image: 'url2',
+		image: `/codepreview.png`,
 		alt: 'url',
 	},
 ];
@@ -61,10 +61,14 @@ const Content: React.FC = () => {
 					className="grid gap-8 gap-y-20 lg:grid-cols-2 items-center justify-items-center"
 				>
 					<div className={index % 2 === 0 ? 'w-full' : 'lg:order-last w-full'}>
-						<img
-							className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+						<Image
+							className="w-full rounded-lg border border-slate-400"
+							width={600}
+							height={320}
+							quality={100}
 							src={item.image}
 							alt={item.alt}
+							unoptimized={true}
 						/>
 					</div>
 					<div className={index % 2 === 0 ? 'lg:order-last' : ''}>

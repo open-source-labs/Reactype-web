@@ -36,6 +36,11 @@ const people = [
 		linkedin: 'https://linkedinin.com/in/adsing',
 	},
 	{
+		name: 'Adam Vanek',
+		github: 'https://github.com/atvanek',
+		linkedin: 'https://linkedin.com/in/atvanek',
+	},
+	{
 		name: 'Ahsan Rao',
 		github: 'https://github.com/ahsan-rao',
 		linkedin: 'https://linkedinin.com/in/ahsan-rao',
@@ -161,9 +166,19 @@ const people = [
 		linkedin: 'https://www.linkedin.com/in/fredochen/',
 	},
 	{
+		name: 'Garrett Hutson',
+		github: '/https://github.com/GarrettHutson',
+		linkedin: 'https://www.linkedin.com/in/garrett-hutson-84144b237',
+	},
+	{
 		name: 'Huy Pham',
 		github: 'https://github.com/huypham048',
 		linkedin: 'https://www.linkedin.com/in/huypham048/',
+	},
+	{
+		name: 'Ian Davis',
+		github: 'https://github.com/iancdavis',
+		linkedin: 'https://www.linkedin.com/in/icdavis/',
 	},
 	{
 		name: 'Jesse Zuniga',
@@ -216,9 +231,19 @@ const people = [
 		linkedin: 'https://www.linkedin.com/in/lukemadden/',
 	},
 	{
+		name: 'Matteo Diterlizzi',
+		github: 'https://github.com/MatteoDiter',
+		linkedin: 'www.linkedin.com/in/matteo-diterlizzi-564166107/',
+	},
+	{
 		name: 'Michael Ng',
 		github: 'https://github.com/mikogome',
 		linkedin: 'www.linkedin.com/in/michaelng2',
+	},
+	{
+		name: 'Mike Dunnmon',
+		github: 'https://github.com/mdunnmon',
+		linkedin: 'www.linkedin.com/in/michaeldunnmon/',
 	},
 	{
 		name: 'Miles Wright',
@@ -241,6 +266,11 @@ const people = [
 		linkedin: 'https://www.linkedin.com/in/philip-minh-hua/',
 	},
 	{
+		name: 'Rachel Kucharski',
+		github: 'https://github.com/rachelk585',
+		linkedin: 'https://www.linkedin.com/in/rachelkucharski/',
+	},
+	{
 		name: 'Ron Fu',
 		github: 'https://github.com/rfvisuals',
 		linkedin: 'https://www.linkedin.com/in/ronfu/',
@@ -259,6 +289,11 @@ const people = [
 		name: 'Shana Hoehn',
 		github: 'https://github.com/slhoehn',
 		linkedin: 'http://www.linkedin.com/in/shana-hoehn',
+	},
+	{
+		name: 'Shirley Liu',
+		github: 'https://github.com/yijunliu90',
+		linkedin: 'https://www.linkedin.com/in/yijunliu/',
 	},
 	{
 		name: 'Shlomo Porges',
@@ -309,6 +344,16 @@ const people = [
 		name: 'William Rittwage',
 		github: 'https://github.com/wbrittwage',
 		linkedin: 'https://www.linkedin.com/in/william-rittwage/',
+	},
+	{
+		name: 'Xiao Wang',
+		github: 'https://github.com/wang9hu',
+		linkedin: 'https://www.linkedin.com/in/xiao-wang-03183285/',
+	},
+	{
+		name: 'Yohan Jeon',
+		github: 'https://github.com/Yoheze',
+		linkedin: 'https://www.linkedin.com/in/yohan-jeon1',
 	},
 	{
 		name: 'William Yoon',
