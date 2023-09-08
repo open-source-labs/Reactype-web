@@ -12,7 +12,8 @@ export default function Home() {
 			<Content />
 			<Features />
 			{/* <Testimonial /> */}
-			<Download />
+			{/* <Download /> */}
+			{/* uncomment download if you want users to be able to download the desktop app */}
 			<Team />
 		</div>
 	);

@@ -29,9 +29,9 @@ const Hero = () => {
 							>
 								Try Here
 							</a>
-							<a href="#download" className="text-lg font-medium leading-6">
+							{/* <a href="#download" className="text-lg font-medium leading-6">
 								Download <span aria-hidden="true">→</span>
-							</a>
+							</a> */}
 						</div>
 					</div>
 				</div>

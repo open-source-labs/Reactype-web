@@ -12,7 +12,7 @@ import logo from 'public/reactype.png';
 const navigation = [
 	{ name: 'Home', href: '/', current: true },
 	// { name: 'Tutorial', href: '/tutorial', current: false },
-	{ name: 'Download', href: '/#download', current: false },
+	// { name: 'Download', href: '/#download', current: false }, // uncomment if you want users to be able to download desktop version
 	{ name: 'Meet the team', href: '/#meettheteam', current: false },
 ];
 
