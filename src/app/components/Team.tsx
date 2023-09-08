@@ -387,8 +387,8 @@ const people = [
 	},
 	{
 		name: 'Hernan Damazo',
-		github: 'https://github.com/dentonwong',
-		linkedin: 'https://www.linkedin.com/in/hernan-wong/',
+		github: 'https://github.com/raulclassico7',
+		linkedin: 'https://www.linkedin.com/in/raul-hernan-damazo-chang-9440ab191',
 	},
 ];
 
