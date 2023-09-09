@@ -41,7 +41,7 @@ const features = [
 		),
 		title: 'Context Manager',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'Create, update, and delete context that you can later assign to specific components. A tree will allow you to visualize the context hierarchy.',
 	},
 	{
 		icon: (
@@ -99,7 +99,7 @@ const features = [
 		),
 		title: 'D3 Visualization',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'View dynamically created components/HTML elements in the component tree. Also check the State Management Tab for a D3 state flow diagram.',
 	},
 	{
 		icon: (
@@ -157,7 +157,7 @@ const features = [
 		),
 		title: 'Next.js and Gatsby.js',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'Add Next.js specific Link and Image components to link components to user-created pages and take advantage of Next.js image optimization.',
 	},
 	{
 		icon: (
@@ -209,7 +209,7 @@ const features = [
 		),
 		title: 'React Router',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'Easily create routes with the Switch and Link router elements.',
 	},
 	{
 		icon: (
@@ -242,7 +242,7 @@ const features = [
 		),
 		title: 'Export Test Suites',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'With the click of a checkbox, you can export your components with Jest and Enzyme tests for not just React, but Next and Gatsby apps as well! The exported folder will include pre-configured Webpack, Jest, and Typescript files along with tests for your project.',
 	},
 	{
 		icon: (
@@ -275,7 +275,7 @@ const features = [
 		),
 		title: 'Interactive Dashboard',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipis elit. Sit enim nec, proin faucibus nibh et sagittis a. Lacinia purus ac amet.',
+			'Collaborate with others through the new interactive dashboard.',
 	},
 ];
 
@@ -288,7 +288,8 @@ const Features = () => {
 						Make every step user-centric
 					</h2>
 					<p className="mt-4 text-base leading-7 text-gray-500 sm:mt-8 font-pj">
-						Lorem ipsum dolor sit amet, consectetur adipis elit
+						The user can create components by dragging instances of these
+						components and HTML elements onto the canvas.
 					</p>
 				</div>
 
