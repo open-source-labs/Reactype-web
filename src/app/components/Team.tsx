@@ -390,6 +390,11 @@ const people = [
 		github: 'https://github.com/raulclassico7',
 		linkedin: 'https://www.linkedin.com/in/raul-hernan-damazo-chang-9440ab191',
 	},
+	{
+		name: 'Sophia Bui',
+		github: 'https://github.com/sophia-bui',
+		linkedin: 'https://www.linkedin.com/in/sophiabui/',
+	},
 ];
 
 const sortedPeople = filterAndSortContributors(people);
