@@ -22,7 +22,7 @@ const features = [
 				<path
 					d="M13 29H1V41C1 43.209 2.791 45 5 45H13V29Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -31,7 +31,7 @@ const features = [
 				<path
 					d="M45 29H33V45H41C43.209 45 45 43.209 45 41V29Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -55,7 +55,7 @@ const features = [
 			>
 				<path
 					d="M27 27H19V45H27V27Z"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -64,7 +64,7 @@ const features = [
 				<path
 					d="M9 37H1V45H9V37Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -73,7 +73,7 @@ const features = [
 				<path
 					d="M45 17H37V45H45V17Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -81,7 +81,7 @@ const features = [
 				/>
 				<path
 					d="M5 17L15 7L23 15L37 1"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -89,7 +89,7 @@ const features = [
 				/>
 				<path
 					d="M28 1H37V10"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -113,7 +113,7 @@ const features = [
 			>
 				<path
 					d="M27 27H19V45H27V27Z"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -122,7 +122,7 @@ const features = [
 				<path
 					d="M9 37H1V45H9V37Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -131,7 +131,7 @@ const features = [
 				<path
 					d="M45 17H37V45H45V17Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -139,7 +139,7 @@ const features = [
 				/>
 				<path
 					d="M5 17L15 7L23 15L37 1"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -147,7 +147,7 @@ const features = [
 				/>
 				<path
 					d="M28 1H37V10"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -175,7 +175,7 @@ const features = [
 				/>
 				<path
 					d="M9 9H33"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -183,7 +183,7 @@ const features = [
 				/>
 				<path
 					d="M9 17H33"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -191,7 +191,7 @@ const features = [
 				/>
 				<path
 					d="M1 25H13V31H29V25H41"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -199,7 +199,7 @@ const features = [
 				/>
 				<path
 					d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -224,7 +224,7 @@ const features = [
 				<path
 					d="M30.562 18.4609C30.0511 17.9392 29.4292 17.5392 28.7426 17.2907C28.0559 17.0422 27.3221 16.9516 26.5956 17.0256C25.8692 17.0996 25.1687 17.3362 24.5462 17.718C23.9237 18.0998 23.3952 18.6169 23 19.2309C22.6049 18.6167 22.0764 18.0995 21.4539 17.7176C20.8315 17.3357 20.1309 17.099 19.4044 17.025C18.6779 16.951 17.944 17.0417 17.2573 17.2903C16.5706 17.5389 15.9488 17.939 15.438 18.4609C14.5163 19.4035 14.0002 20.6695 14.0002 21.9879C14.0002 23.3063 14.5163 24.5722 15.438 25.5149L23 33.1999L30.564 25.5159C31.485 24.5726 32.0004 23.3064 32 21.988C31.9997 20.6696 31.4835 19.4037 30.562 18.4609Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -232,7 +232,7 @@ const features = [
 				/>
 				<path
 					d="M41 41H5C3.93913 41 2.92172 40.5786 2.17157 39.8284C1.42143 39.0783 1 38.0609 1 37V1H17L22 9H45V37C45 38.0609 44.5786 39.0783 43.8284 39.8284C43.0783 40.5786 42.0609 41 41 41Z"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -256,7 +256,7 @@ const features = [
 			>
 				<path
 					d="M25 7C34.941 7 43 15.059 43 25C43 34.941 34.941 43 25 43C15.059 43 7 34.941 7 25"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
@@ -265,7 +265,7 @@ const features = [
 				<path
 					d="M19 1C9.059 1 1 9.059 1 19H19V1Z"
 					fill="#d4d4d8"
-					stroke="#161616"
+					stroke="#d4d4d8"
 					stroke-width="2"
 					stroke-miterlimit="10"
 					stroke-linecap="round"
