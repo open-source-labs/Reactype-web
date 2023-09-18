@@ -126,7 +126,7 @@ export default function Footer() {
 									href="https://app.reactype.dev/#/login"
 									className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#006f73] font-medium"
 								>
-									Get Started
+									Sign up
 								</a>
 							</div>
 						</div>
