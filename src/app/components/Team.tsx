@@ -395,6 +395,26 @@ const people = [
 		github: 'https://github.com/sophia-bui',
 		linkedin: 'https://www.linkedin.com/in/sophiabui/',
 	},
+	{
+		name: 'Rick McGrath',
+		github: 'https://github.com/r-mcgrath',
+		linkedin: 'https://www.linkedin.com/in/rick-mcgrath-b1617126b/',
+	},
+	{
+		name: 'Hadrian Chan',
+		github: 'https://github.com/HadriChan',
+		linkedin: 'https://www.linkedin.com/in/hadrian-chan-445a8622a/',
+	},
+	{
+		name: 'Nam Ha',
+		github: 'https://github.com/namos2502',
+		linkedin: 'https://www.linkedin.com/in/namos2502/',
+	},
+	{
+		name: 'Sonya Hu',
+		github: 'https://github.com/sonyahu15',
+		linkedin: 'https://www.linkedin.com/in/sonyahu25/',
+	},
 ];
 
 const sortedPeople = filterAndSortContributors(people);
@@ -406,7 +426,7 @@ export default function Team() {
 				<div className="my-10 ">
 					<h1 className="text-6xl font-bold text-left">Our Team</h1>
 					<p className="my-5 text-gray-500">
-						Checkout our wonderful contributors
+						Check out our wonderful contributors
 					</p>
 				</div>
 				<ul
