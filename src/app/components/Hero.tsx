@@ -19,7 +19,7 @@ const Hero = () => {
 							A visual prototyping tool for React developers
 						</h1>
 						<p className="mt-6  text-lg leading-8 ">
-							A comprehensive type checking with TypeScript and flexible
+							Built-in comprehensive type checking with TypeScript and flexible
 							exporting in Classic React, Next.js, or Gatsby.js
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
