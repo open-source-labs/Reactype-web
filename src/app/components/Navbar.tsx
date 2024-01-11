@@ -81,7 +81,7 @@ export default function Navbar() {
 					</div>
 					<a
 						href="https://app.reactype.dev/#/login"
-						className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#006f73] font-medium"
+						className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#29A38A] font-medium"
 					>
 						Sign up
 					</a>
