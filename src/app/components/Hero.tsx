@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import heroImage from 'public/herodemo.png';
+import heroImage from 'public/v19mainpage.png';
 
 const Hero = () => {
 	return (
@@ -25,7 +25,7 @@ const Hero = () => {
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<a
 								href="https://app.reactype.dev/#/login"
-								className="rounded-md bg-white px-6 py-3 text-lg  font-medium text-black shadow-sm"
+								className="rounded-md bg-[#29A38A] px-6 py-3 text-lg  font-medium text-white shadow-sm"
 							>
 								Try Here
 							</a>
@@ -36,7 +36,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className="flex justify-center">
-					<Image width={1100} height={589} src={heroImage} alt="logo" />
+					<Image width={1100} height={600} src={heroImage} alt="logo" />
 				</div>
 			</div>
 		</div>

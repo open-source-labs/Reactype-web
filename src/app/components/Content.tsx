@@ -30,6 +30,13 @@ const content: Features[] = [
 		image: `/codepreview.png`,
 		alt: 'url',
 	},
+	{
+		title: 'Collaboration Room',
+		paragraph:
+			'Join and host projects in real time with fellow developers - now with optional user tracking.',
+		image: `/v19collabdemo.png`,
+		alt: 'url',
+	},
 ];
 
 const Content: React.FC = () => {

@@ -221,6 +221,16 @@ const people = [
 		linkedin: 'https://www.linkedin.com/in/khuong-nguyen/',
 	},
 	{
+		name: 'Laura Forden',
+		github: 'https://github.com/lauraafor',
+		linkedin: 'https://www.linkedin.com/in/la-forden',
+	},
+	{
+		name: 'Lauren Leer',
+		github: 'https://github.com/LALeer',
+		linkedin: 'https://www.linkedin.com/in/lauren-leer',
+	},
+	{
 		name: 'Linh Tran',
 		github: 'https://github.com/linhatran',
 		linkedin: 'https://www.linkedin.com/in/linhatran',
@@ -276,9 +286,19 @@ const people = [
 		linkedin: 'https://www.linkedin.com/in/ronfu/',
 	},
 	{
+		name: 'Rose Jiang',
+		github: 'https://github.com/jujupro',
+		linkedin: 'https://www.linkedin.com/in/rose-jiang',
+	},
+	{
 		name: 'Salvatore Saluga',
 		github: 'https://github.com/SalSaluga',
 		linkedin: 'https://www.linkedin.com/in/salvatore-saluga/',
+	},
+	{
+		name: 'Sang (Sean) Kil',
+		github: 'https://github.com/Skilzsz',
+		linkedin: 'https://www.linkedin.com/in/sanghkil',
 	},
 	{
 		name: 'Sean Sadykoff',
