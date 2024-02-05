@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { github, linkedin } from "../../../../public";
-import { people } from "../../constants";
+import { github, linkedin } from "../../../public";
+import { people } from "../constants";
 
 interface People {
   name: string;

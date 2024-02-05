@@ -2,7 +2,7 @@ import Content from "./components/Content";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Team from "./components/teamPage/Team";
+import Team from "./pages/Team";
 import Testimonial from "./components/Testimonial";
 
 const Home = () => {

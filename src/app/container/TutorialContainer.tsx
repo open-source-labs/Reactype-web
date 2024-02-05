@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import React from "react";
-import Team from "../components/teamPage/Team";
+import Team from "../pages/Team";
 
 const TutorialContainer = () => {
   return (

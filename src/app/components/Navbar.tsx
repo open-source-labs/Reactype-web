@@ -8,7 +8,6 @@ import { reacTypeLogoTwo } from "../assets";
 import Image from "next/image";
 import { dropDownMenuItems, dropDownMenuTitles } from "../constants";
 import Link from "next/link";
-import { Team } from "./teamPage/Team";
 
 interface NavigationItem {
   name: string;
@@ -18,7 +17,7 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
-  { name: "teamPage", href: "/#meettheteam", current: false },
+  { name: "teamPage", href: "/team", current: false },
 ];
 
 const Navbar: React.FC = () => {
@@ -40,17 +39,18 @@ const Navbar: React.FC = () => {
           {dropDownMenuTitles.map((title, i) => (
             <DropDown
               key={i}
-              index={i}
+              // index={i}
               title={title}
               dropDownMenuItems={dropDownMenuItems[i]}
             />
           ))}
           <div className="text-black relative flex flex-row items-center rounded-sm">
-            <Link href="teamPage">
-              <button className="p-4 w-full flex items-center font-medium hover:text-[#0670e0] duration-300 text-lg cursor-pointer">
-                Our Team
-              </button>
-            </Link>
+            <a
+              href="/Team"
+              className="p-4 w-full flex items-center font-medium hover:text-[#0670e0] duration-300 text-lg cursor-pointer"
+            >
+              Our Team
+            </a>
           </div>
         </ul>
         <ul>
