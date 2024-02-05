@@ -1,20 +1,28 @@
-import Content from './components/Content';
-import Download from './components/Download';
-import Features from './components/Features';
-import Hero from './components/Hero';
-import Image from 'next/image';
-import Team from './components/Team';
-import Testimonial from './components/Testimonial';
-export default function Home() {
-	return (
-		<div>
-			<Hero />
-			<Content />
-			<Features />
-			{/* <Testimonial /> */}
-			{/* <Download /> */}
-			{/* uncomment download if you want users to be able to download the desktop app */}
-			<Team />
-		</div>
-	);
-}
+import Content from "./components/Content";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Team from "./components/teamPage/Team";
+import Testimonial from "./components/Testimonial";
+
+const Home = () => {
+  return (
+    <div id="smooth-content" className="relative z-0">
+      <div className="bg-grid-slate-900/[0.04] bg-no-repeat bg-center border-b-4 bg-[#f1efea] section-border-gradient">
+        <Hero />
+      </div>
+      <section className="blue-gradient-bg border-t-4 section-border-gradient">
+        <Content />
+      </section>
+      <section className="bg-[#f1efea] border-t-4 section-border-gradient">
+        <Features />
+        <Testimonial />
+      </section>
+      <section className="bg-[#f1efea] border-t-4 section-border-gradient">
+        <Footer />
+      </section>
+    </div>
+  );
+};
+
+export default Home;

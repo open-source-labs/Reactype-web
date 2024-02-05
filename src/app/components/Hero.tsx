@@ -1,46 +1,73 @@
-import Image from 'next/image';
-import React from 'react';
-import heroImage from 'public/v19mainpage.png';
+import Image from "next/image";
+import React from "react";
+import { styles } from "../style";
+import { Button } from "@mui/material";
+import { reacTypeLogoTwo } from "../assets";
 
 const Hero = () => {
-	return (
-		<div>
-			{' '}
-			<div className="relative isolate px-6 lg:px-8">
-				<div
-					className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-					aria-hidden="true"
-				>
-					<div className="relative " />
-				</div>
-				<div className="mx-auto max-w-3xl py-20 sm:py-48 lg:py-40">
-					<div className="text-center">
-						<h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-							A visual prototyping tool for React developers
-						</h1>
-						<p className="mt-6  text-lg leading-8 ">
-							Built-in comprehensive type checking with TypeScript and flexible
-							exporting in Classic React, Next.js, or Gatsby.js
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<a
-								href="https://app.reactype.dev/#/login"
-								className="rounded-md bg-[#29A38A] px-6 py-3 text-lg  font-medium text-white shadow-sm"
-							>
-								Try Here
-							</a>
-							{/* <a href="#download" className="text-lg font-medium leading-6">
-								Download <span aria-hidden="true">→</span>
-							</a> */}
-						</div>
-					</div>
-				</div>
-				<div className="flex justify-center">
-					<Image width={1100} height={600} src={heroImage} alt="logo" />
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <section className="relative w-full h-screen mx-auto">
+      <div className="absolute h-full w-full bg-[radial-gradient(#eed4c3_1.2px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+        <div
+          className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5`}
+        >
+          <h1
+            className={`${styles.heroHeadText} text-img text-center text-[#031c64]`}
+          >
+            A Visual Prototyping<span className="text-[#0670e0]"> </span>
+            <span className="text-[#0670e0]">Tool For React</span> Developers
+          </h1>
+          <h3
+            className={`${styles.sectionSubText} text-center w-[53rem] text-black mt-[-3rem] text-lg leading-8`}
+          >
+            Built-in comprehensive type checking with TypeScript and flexible
+            exporting in Classic React, Next.js, or Gatsby.js
+          </h3>
+          <div className="flex flex-row">
+            <Button
+              className="dark-button"
+              variant="contained"
+              sx={{
+                margin: "0.8rem",
+                backgroundColor: "#031c64",
+                borderRadius: "5rem",
+                width: "8rem",
+                height: "3rem",
+                fontSize: "1rem",
+                font: "bold",
+                textTransform: "none",
+                "&:hover": {
+                  backgroundColor: "#0670e0",
+                },
+              }}
+            >
+              Try Here
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{
+                margin: "0.8rem",
+                color: "black",
+                borderRadius: "5rem",
+                border: "1px solid black",
+                width: "8rem",
+                height: "3rem",
+                fontSize: "1rem",
+                font: "bold",
+                textTransform: "none",
+                "&:hover": {
+                  backgroundColor: "#a5bdd6",
+                  border: "1px solid black",
+                },
+              }}
+            >
+              Talk To Us
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;

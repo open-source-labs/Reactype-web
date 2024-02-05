@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; 
+  background-color: black;
+  background-image: none; 
+} */
+
+.dark-button {
+  background-color: #031c64;
+}
+
+.logo-image {
+  margin: -5rem 0 -5rem 0;
+  display: flex;
+  flex-direction: flex-start;
+  width: 15rem;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
+.black-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.blue-gradient {
+  background: #042d83;
+  background: linear-gradient(-90deg, #042d83 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #042d83 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
+.card-hover {
+  transition: 300ms;
+}
+
+.card-hover:hover {
+  scale: 1.03;
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.orange-text-gradient {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f12711,
+    #f5af19
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f12711,
+    #f5af19
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-bg {
+  background-color: hsla(225, 90%, 20%, 1);
+  background-image: radial-gradient(
+      at 81% 99%,
+      hsla(210, 93%, 45%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 31% 0%, hsla(197, 0%, 0%, 1) 0px, transparent 50%);
+}
+
+.blue-gradient-bg-card {
+  background-color: hsla(225, 90%, 20%, 1);
+  background-image: radial-gradient(
+      at 0% 4%,
+      hsla(210, 93%, 45%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 76% 79%, hsla(197, 0%, 0%, 1) 0px, transparent 50%);
+}
+
+.section-border-gradient {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, #031c64, #0670e0);
+  border-image-slice: 1;
+  width: 100%;
+}
+
+.green-text-gradient {
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #11998e,
+    #38ef7d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #11998e,
+    #38ef7d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2f80ed,
+    #56ccf2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2f80ed,
+    #56ccf2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #ec008c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ec008c,
+    #fc6767
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ec008c,
+    #fc6767
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* canvas- styles */
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+/* .grid-bg {
+<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
+} */
+
+/* .text-img {
+  background-image: url(assets/blue-orange-bg-2.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  background-position: right center;
+  background-size: 100vh;
+  background: linear-gradient(to right, #031c64, #0670e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.text-img-main {
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+
+  background-size: 130%;
+}
+
+.header.active {
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  backdrop-filter: blur(2rem);
+}
+
+.footer-bg-img {
+  background-image: url("../app/assets/reactype-foooter.png");
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Adjust the alpha (last value) for the desired opacity */
+}
+
+.menu-box-shadow {
+  box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+    1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+    0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+    -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+    -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+}
