@@ -463,6 +463,26 @@ const people = [
     github: "https://github.com/sonyahu15",
     linkedin: "https://www.linkedin.com/in/sonyahu25/",
   },
+  {
+    name: "Cyrus Burns",
+    github: "https://github.com/cyburns",
+    linkedin: "https://www.linkedin.com/in/cyrus-burns/",
+  },
+  {
+    name: "Jon Wage",
+    github: "",
+    linkedin: "",
+  },
+  {
+    name: "Brian Yan",
+    github: "",
+    linkedin: "",
+  },
+  {
+    name: "Eliza Zhang",
+    github: "",
+    linkedin: "",
+  },
 ];
 
 export {

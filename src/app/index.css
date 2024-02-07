@@ -33,6 +33,13 @@
   width: 15rem;
 }
 
+.logo-image-small {
+  margin: -3rem 0 0 -2rem;
+  display: flex;
+  flex-direction: flex-start;
+  width: 15rem;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -218,10 +225,6 @@
   backdrop-filter: blur(2rem);
 }
 
-.footer-bg-img {
-  background-image: url("../app/assets/reactype-foooter.png");
-}
-
 input::placeholder,
 textarea::placeholder {
   color: rgba(
@@ -240,4 +243,10 @@ textarea::placeholder {
     -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
     -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
     -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 360px) {
+  .small-device-hide {
+    display: none;
+  }
 }
