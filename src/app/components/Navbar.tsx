@@ -5,10 +5,19 @@ import { styles } from "../style";
 import DropDown from "../hoc/DropDown";
 import { Button } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { reacTypeLogoTwo, reacTypeLogoWithNoText } from "../assets";
+import { whiteLogoNoText } from "../assets";
 import Image from "next/image";
 import { dropDownMenuItems, dropDownMenuTitles } from "../constants";
 import Link from "next/link";
+import { AccountCircle } from "@mui/icons-material";
+import { ClassNames } from "@emotion/react";
+
+import {
+  reacTypeLogoTwo,
+  reacTypeLogoWithNoText,
+  whiteReacTypeLogoTwo,
+} from "../assets";
+
 import { Menu } from "@mui/icons-material";
 
 interface NavigationItem {
@@ -22,118 +31,177 @@ const navigation: NavigationItem[] = [
   { name: "teamPage", href: "/team", current: false },
 ];
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isMobileMenuOpen, toggleMobileMenu] = useState(false);
-
-  const smallScreenSize = useMediaQuery("(min-width:600px)");
+  const smallScreenSize = useMediaQuery("(min-width:967px)");
   const mediumScreenSize = useMediaQuery("(min-width:1200px)");
 
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex py-5 fixed top-0 z-20 bg-[#f1efea] bg-opacity-80 border-b-2`}
-      style={{ backdropFilter: "blur(10px)" }}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
-        <Link href="/" className="mt-[2rem]">
-          {smallScreenSize ? (
-            <Image
-              src={reacTypeLogoTwo}
-              alt="logo"
-              className="h-[8rem] object-contain flex flex-start logo-image"
-            />
-          ) : (
-            <Image
-              src={reacTypeLogoWithNoText}
-              alt="logo"
-              className="h-[4rem] object-contain flex flex-start logo-image-small"
-            />
-          )}
-        </Link>
-        {mediumScreenSize ? (
-          <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
-            {dropDownMenuTitles.map((title, i) => (
-              <DropDown
-                key={i}
-                // index={i}
-                title={title}
-                dropDownMenuItems={dropDownMenuItems[i]}
+    <>
+      {smallScreenSize ? (
+        <nav
+          className={`${styles.paddingX} w-full flex py-5 fixed top-0 z-20 bg-black bg-opacity-80`}
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
+            <Link href="/" className="mt-[2rem]">
+              <Image
+                src={
+                  smallScreenSize
+                    ? whiteReacTypeLogoTwo
+                    : reacTypeLogoWithNoText
+                }
+                alt="logo"
+                className={`h-${
+                  smallScreenSize ? 8 : 4
+                }rem object-contain flex flex-start ${
+                  smallScreenSize ? "logo-image" : "logo-image-small"
+                }`}
               />
-            ))}
-            <div className="text-black relative flex flex-row items-center rounded-sm">
-              <a
-                href="/Team"
-                className="p-4 w-full flex items-center font-medium hover:text-[#0670e0] duration-300 text-lg cursor-pointer"
-              >
-                Our Team
-              </a>
-            </div>
-          </ul>
-        ) : null}
-        <ul>
-          {mediumScreenSize ? (
-            <li>
-              <a href="https://app.reactype.dev/#/login">
-                <Button
-                  className="dark-button"
-                  variant="contained"
-                  sx={{
-                    borderRadius: "5rem",
-                    width: "6rem",
-                    height: "3rem",
-                    fontSize: "1rem",
-                    font: "bold",
-                    textTransform: "none",
-                    "&:hover": {
-                      backgroundColor: "#0670e0",
-                    },
-                  }}
-                >
-                  Log in
-                </Button>
-              </a>
-              <a href="https://app.reactype.dev/#/signup">
-                <Button
-                  className="small-screen-hide"
-                  variant="outlined"
-                  sx={{
-                    marginLeft: "1rem",
-
-                    color: "black",
-                    borderRadius: "5rem",
-                    border: "1px solid black",
-                    width: "6rem",
-                    height: "3rem",
-                    fontSize: "1rem",
-                    font: "bold",
-                    textTransform: "none",
-                    "&:hover": {
-                      backgroundColor: "#a5bdd6",
-                      border: "1px solid black",
-                    },
-                  }}
-                >
-                  Sign up
-                </Button>
-              </a>
-            </li>
-          ) : (
-            <Menu
-              sx={{
-                color: "#253b80",
-                width: "5rem",
-                height: "3rem",
-                transition: "300ms",
-                "&:hover": {
-                  cursor: "pointer",
-                  color: "#189bd7",
-                },
-              }}
-              onClick={() => toggleMobileMenu(!isMobileMenuOpen)}
-            />
-          )}
-        </ul>
-      </div>
-    </nav>
+            </Link>
+            {mediumScreenSize && (
+              <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
+                {/* Assuming dropDownMenuTitles and dropDownMenuItems are defined */}
+                {dropDownMenuTitles.map((title, i) => (
+                  <DropDown
+                    key={i}
+                    title={title}
+                    dropDownMenuItems={dropDownMenuItems[i]}
+                  />
+                ))}
+                <div className="white-text-grad relative flex flex-row items-center rounded-sm">
+                  <a
+                    href="/Team"
+                    className="p-4 w-full flex items-center font-medium hover:text-[#0670e0] duration-300 text-lg cursor-pointer"
+                  >
+                    Our Team
+                  </a>
+                </div>
+              </ul>
+            )}
+            <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
+              <li>
+                <a href="https://app.reactype.dev/#/login">
+                  <Button
+                    className="white-button shadow-2xl"
+                    variant="contained"
+                    sx={{
+                      margin: "0.8rem -1rem 0.8rem 0.8rem",
+                      borderRadius: "5rem",
+                      width: "6rem",
+                      height: "3rem",
+                      fontSize: "1rem",
+                      font: "bold",
+                      textTransform: "none",
+                      "&:hover": {
+                        backgroundColor: "#bdb7c7",
+                      },
+                    }}
+                  >
+                    Log in
+                  </Button>
+                </a>
+              </li>
+              <li>
+                <a href="https://app.reactype.dev/#/signup">
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      margin: "0.8rem",
+                      color: "white",
+                      borderRadius: "5rem",
+                      border: "2px solid white",
+                      width: "6rem",
+                      height: "3rem",
+                      fontSize: "1rem",
+                      font: "bold",
+                      textTransform: "none",
+                      "&:hover": {
+                        backgroundColor: "#9b97a4",
+                        border: "2px solid white",
+                      },
+                    }}
+                  >
+                    Sign up
+                  </Button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      ) : (
+        <header
+          id="header"
+          className={isMobileMenuOpen ? "active expanded-header" : ""}
+        >
+          <div className="container m-10">
+            <nav className="nav">
+              <ul className="nav-list nav-list-larger">
+                {/* Assuming whiteLogoNoText is defined */}
+                {smallScreenSize && (
+                  <li className="nav-item flex-start">
+                    <a href="/" className="mt-[2rem]">
+                      <Image
+                        src={whiteLogoNoText}
+                        alt="logo"
+                        className="h-[2rem] object-contain flex flex-start logo-image"
+                      />
+                    </a>
+                  </li>
+                )}
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Solutions
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Learn
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Our Team
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    className="nav-link ml-[1.5rem]"
+                    href="https://app.reactype.dev/#/login"
+                  >
+                    <AccountCircle fontSize="large" />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    id="searchIcon"
+                    href="#"
+                    className="nav-link nav-link-search"
+                  ></a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link nav-link-bag"></a>
+                </li>
+              </ul>
+              <ul className="nav-list nav-list-mobile">
+                <li className="left nav-item">
+                  <div
+                    className="mobile-menu"
+                    onClick={() => toggleMobileMenu(!isMobileMenuOpen)}
+                  >
+                    <span className="line line-top"></span>
+                    <span className="line line-bottom"></span>
+                  </div>
+                </li>
+                <li className="right nav-item">
+                  <a href="#" className="nav-link nav-link-cb"></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      )}
+    </>
   );
 };
 

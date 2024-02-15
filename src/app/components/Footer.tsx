@@ -30,7 +30,7 @@ const currentYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <footer
-      className=" footer-bg-img h-[50vh] pt-20"
+      className="footer-bg-img h-[50vh] pt-20"
       style={{
         backgroundImage: `url(${footerSmallBackground.src})`,
         backgroundPosition: " top",

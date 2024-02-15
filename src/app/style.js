@@ -10,7 +10,7 @@ const styles = {
 
   sectionHeadText:
     "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
-  sectionSubText: "sm:text-[18px] text-[14px] tracking-wider",
+  sectionSubText: "lg:text-[20px] sm:text-[18px] text-[14px] tracking-wider",
 
   sectionHeadTextBlack:
     "text-black font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",

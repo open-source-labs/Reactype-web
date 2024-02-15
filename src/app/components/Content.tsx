@@ -1,5 +1,12 @@
 import Image from "next/image";
 import React from "react";
+import { styles } from "../style";
+import {
+  heroBackgroundImage,
+  bubbleHeroBackground,
+  squareChromeBackground,
+} from "../assets";
+
 // import blob from "public/blob.svg";
 interface Features {
   title: string;
@@ -40,16 +47,14 @@ const content: Features[] = [
 ];
 
 const Content: React.FC = () => {
-  const backgroundStyle: React.CSSProperties = {
-    // backgroundImage: `url(${blob})`,
-    backgroundPosition: "top", // Align the background image to the top
-    backgroundSize: "cover",
-  };
-
   return (
-    <div
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 space-y-16 "
-      style={backgroundStyle}
+    <section
+      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:w-full md:px-24 lg:px-8 lg:py-20 space-y-16 bg-white"
+      // style={{
+      //   backgroundImage: `url(${squareChromeBackground.src})`,
+      //   backgroundSize: "cover", // or "contain"
+      //   backgroundPosition: "1rem",
+      // }}
     >
       {/* <img src={blob} alt="" /> */}
       <div className="py-20 mx-auto max-w-2xl text-center margin-auto">
@@ -65,10 +70,10 @@ const Content: React.FC = () => {
       {content.map((item, index) => (
         <div
           key={index}
-          className="grid gap-8 gap-y-20 lg:grid-cols-2 items-center justify-items-center"
+          className="grid gap-10 gap-y-20 lg:grid-cols-4 items-center justify-items-center col-span-2"
         >
-          <div className={index % 2 === 0 ? "w-full" : "lg:order-last w-full"}>
-            {/* <Image
+          <div className="w-full lg:col-span-2">
+            <Image
               className="w-full rounded-lg border border-slate-400"
               width={600}
               height={320}
@@ -76,8 +81,22 @@ const Content: React.FC = () => {
               src={item.image}
               alt={item.alt}
               unoptimized={true}
-            /> */}
+            />
           </div>
+
+          <div className={index % 2 === 0 ? "lg:order-last" : ""}>
+            <div className="flex flex-col justify-center items-center bg-[#f1efea] rounded-lg p-10 shadow-lg card-hover">
+              <div className="mb-6 text-center max-w-sm">
+                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-[#031c64] sm:text-4xl sm:leading-none">
+                  {item.title}
+                </h2>
+                <p className="text-base text-center text-black md:text-lg">
+                  {item.paragraph}
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className={index % 2 === 0 ? "lg:order-last" : ""}>
             <div className="flex flex-col justify-center items-center bg-[#f1efea] rounded-lg p-10 shadow-lg card-hover">
               <div className="mb-6 text-center max-w-sm">
@@ -92,7 +111,7 @@ const Content: React.FC = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

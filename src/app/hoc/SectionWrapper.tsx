@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import { staggerContainer } from "../utils/motion";
 
-const SectionWrapper = (Component, idName) =>
+const SectionWrapper = (Component: React.FC, idName: string) =>
   function HOC() {
     return (
       <motion.section
-        variants={staggerContainer()}
+        variants={staggerContainer({
+          staggerChildren: 0.1,
+          delayChildren: 0.2,
+        })}
         initial="hidden"
         whileInView="show"
         viewport={{

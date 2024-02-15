@@ -2,12 +2,15 @@ import Image from "next/image";
 import React from "react";
 import { styles } from "../style";
 import { Button } from "@mui/material";
-import { reacTypeLogoTwo } from "../assets";
+import { heroBackgroundImage } from "../assets";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div className="absolute h-full w-full bg-[radial-gradient(#eed4c3_1.2px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+    <section
+      className="relative w-full h-screen mx-auto hero-bg"
+      style={{ backgroundImage: `url(${heroBackgroundImage})` }}
+    >
+      <div className="absolute h-full w-full bg-[radial-gradient(#eed4c3_1.2px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] ">
         <div
           className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5`}
         >

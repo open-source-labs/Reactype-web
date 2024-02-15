@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import { bubbleCube } from "../assets";
+import { styles } from "../style";
+import {
+  heroBackgroundImage,
+  bubbleHeroBackground,
+  squareChromeBackground,
+} from "../assets";
+import SectionWrapper from "../hoc/SectionWrapper";
 
 const features = [
   {
@@ -178,22 +186,30 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
+    <section
+      className="py-12 sm:py-16 lg:py-20 "
+      style={{
+        backgroundImage: `url(${bubbleHeroBackground.src})`,
+        backgroundSize: "cover", // or "contain"
+        backgroundPosition: "1rem",
+      }}
+    >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
         <div className="text-center">
-          <h2 className="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl font-pj text-[#031c64]">
-            Make Every Step <span className="text-[#0670e0]">User-Centric</span>
+          <h2 className="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl font-pj white-text-grad">
+            Make Every Step User-Centric
           </h2>
-          <p className="mt-4 text-base leading-7 text-gray-500 sm:mt-8 font-pj">
-            Users can easily create and customize components and HTML elements
-            by dragging them onto the canvas.
+          <p className="mt-4 text-base leading-7 gray-text-grad sm:mt-8 font-pj">
+            ReacType is a prototyping tool that allows users to visualize their
+            application architecture dynamically, employing a drag-and-drop
+            canvas display and an interactive, real-time component code preview.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 ">
+        <div className=" grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 ">
           {features.map((feature, index) => (
-            <div key={index} className="md:p-8 lg:p-14 ">
-              <div className="blue-gradient-bg-card rounded-lg p-5 w-[18rem] h-[20rem] card-hover">
+            <div key={index} className=" md:p-8 lg:p-14 ">
+              <div className="bg-[#141414] rounded-lg p-5 w-[18rem] h-[20rem] card-hover border-top-grey">
                 {feature.icon}
                 <h3 className="mt-12 text-xl font-bold text-gray-100 font-pj ">
                   {feature.title}

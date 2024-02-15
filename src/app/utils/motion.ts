@@ -99,7 +99,7 @@ export const slideIn = ({ direction, type, delay, duration }: SlideInProps) => {
 };
 
 interface StaggerContainerProps {
-  staggerChildren: number;
+  staggerChildren?: number;
   delayChildren?: number;
 }
 
