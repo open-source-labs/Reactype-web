@@ -1,5 +1,5 @@
 interface TextVariantProps {
-  delay: number;
+  delay?: number;
 }
 
 export const textVariant = ({ delay }: TextVariantProps) => {

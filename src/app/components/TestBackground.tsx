@@ -1,9 +1,23 @@
+"use client";
+
 import React from "react";
 import { Button, Divider } from "@mui/material";
 import { styles } from "../style";
 import { bubbleHeroBackground, glassHero } from "../assets";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const headerScrollRef = useRef(null);
+  const isHeaderInView = useInView(headerScrollRef);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    isHeaderInView
+      ? mainControls.start("visible")
+      : mainControls.start("hidden");
+  }, [isHeaderInView]);
+
   return (
     <section
       className="relative w-full h-screen mx-auto hero-bg"
@@ -13,8 +27,28 @@ const Hero = () => {
         backgroundPosition: "-1vh",
       }}
     >
-      <div className="h-full w-full">
-        <div
+      <div ref={headerScrollRef} className="h-full w-full">
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: -300,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: -350,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={mainControls}
           className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5 bg`}
           style={{ zIndex: 2 }}
         >
@@ -23,12 +57,12 @@ const Hero = () => {
             <span className="text-img-main"> Tool For React </span>
             Developers
           </h1>
-          <h3
-            className={`${styles.sectionSubText} text-center lg:w-[53rem] gray-text-grad lg:mt-[-3rem] text-lg leading-8`}
+          <p
+            className={`${styles.sectionSubText} text-center text-xl leading-8 text-[#86868b] lg:mt-[-3rem] mb-5`}
           >
             Built-in comprehensive type checking with TypeScript and flexible
             exporting.
-          </h3>
+          </p>
           <div className="flex flex-row" style={{ zIndex: 2 }}>
             <Button
               href="http://localhost:8080/#/signup"
@@ -71,7 +105,7 @@ const Hero = () => {
             </Button>
           </div>
           <Divider />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

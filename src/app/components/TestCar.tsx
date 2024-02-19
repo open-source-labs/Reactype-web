@@ -13,6 +13,8 @@ import { useMediaQuery } from "@mui/material";
 import { ServiceData } from "../constants";
 import { styles } from "../style";
 import { Carousel } from "@material-tailwind/react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -48,16 +50,68 @@ const SwiperNavButtons = () => {
 };
 
 const TestCar = () => {
-  const smallScreenSize = useMediaQuery("(min-width:1060px)");
+  const smallScreenSize = useMediaQuery("(min-width:1260px)");
+
+  const headerScrollRef = useRef(null);
+  const cardsSwiperScrollRef = useRef(null);
+  const bottomScrollRef = useRef(null);
+
+  const isHeaderInView = useInView(headerScrollRef);
+  const isCardsSwiperInView = useInView(cardsSwiperScrollRef);
+  const isBottomInView = useInView(bottomScrollRef);
+
+  const mainControls = useAnimation();
+  const secondaryControls = useAnimation();
+  const tertiaryControls = useAnimation();
+
+  useEffect(() => {
+    isHeaderInView
+      ? mainControls.start("visible")
+      : mainControls.start("hidden");
+
+    isCardsSwiperInView
+      ? secondaryControls.start("visible")
+      : secondaryControls.start("hidden");
+
+    isBottomInView
+      ? tertiaryControls.start("visible")
+      : tertiaryControls.start("hidden");
+  }, [isHeaderInView, isCardsSwiperInView, isBottomInView]);
 
   return (
     <section
       className={`${styles.paddingX} px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:w-full md:px-24 lg:px-8 lg:py-20 space-y-16 bg-black`}
     >
-      <div className="flex flex-wrap items-center justify-between">
+      <motion.div
+        ref={headerScrollRef}
+        viewport={{ root: headerScrollRef }}
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 75,
+            transition: {
+              type: "spring",
+              duration: 1.25,
+              delay: 0.5,
+            },
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1.25,
+              delay: 0.2,
+            },
+          },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        className="flex flex-wrap items-center justify-between"
+      >
         <div className="w-full  lw-full py-20 md:mx-auto sm:mx-auto max-w-4xl">
           <h2
-            className={`lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] sm:text-[50px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0`}
+            className={`${styles.sectionHeadText} lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0`}
           >
             The fastest way to develop effective software.
           </h2>
@@ -80,10 +134,38 @@ const TestCar = () => {
             className="w-[25rem] mr-auto sm:display-none"
           />
         ) : null}
-      </div>
+      </motion.div>
 
-      <div className="flex items-center justify-center flex-col h-[600px] bg-black">
-        <div className="swiper-section-container">
+      <div
+        ref={cardsSwiperScrollRef}
+        className="flex items-center justify-center flex-col h-[600px] bg-black"
+      >
+        <motion.div
+          viewport={{ root: cardsSwiperScrollRef }}
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 75,
+              transition: {
+                type: "spring",
+                duration: 4.75,
+                delay: 0.5,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 1.75,
+                delay: 0.5,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={secondaryControls}
+          className="swiper-section-container"
+        >
           <h1>
             <Swiper
               modules={[Pagination]}
@@ -103,21 +185,49 @@ const TestCar = () => {
               <SwiperNavButtons />
             </Swiper>
           </h1>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="flex flex-wrap  items-center justify-between">
-        <div className="w-full lg:w-2/5 py-20 md:mx-auto sm:mx-auto max-w-3xl">
-          <h2 className="lg:text-[44px] tracking-tight text-[#86868b] sm:text-6xl">
-            Take a closer look.
-          </h2>
-        </div>
-        <div className="mr-auto">
-          <p className="text-[#2997ff] text-[19px] hover:underline">
-            Try Here{" "}
-            <NavigateNext sx={{ color: "#2997ff", fontSize: "25px" }} />
-          </p>
-        </div>
+      <div ref={bottomScrollRef}>
+        <motion.div
+          viewport={{ root: bottomScrollRef }}
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 75,
+              transition: {
+                type: "spring",
+                duration: 1.75,
+                delay: 0.5,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 1.75,
+                delay: 0.2,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={tertiaryControls}
+        >
+          <div className="flex flex-wrap  items-center justify-between">
+            <div className="w-full lg:w-2/5 py-20 md:mx-auto sm:mx-auto max-w-3xl">
+              <h2 className="lg:text-[44px] tracking-tight text-[#86868b] sm:text-6xl">
+                Take a closer look.
+              </h2>
+            </div>
+            <div className="mr-auto">
+              <p className="text-[#2997ff] text-[19px] hover:underline">
+                Try Here{" "}
+                <NavigateNext sx={{ color: "#2997ff", fontSize: "25px" }} />
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

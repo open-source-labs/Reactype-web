@@ -169,22 +169,23 @@ const Navbar = () => {
                     className="nav-link ml-[1.5rem]"
                     href="https://app.reactype.dev/#/login"
                   >
-                    <AccountCircle fontSize="large" />
+                    Log in
                   </a>
                 </li>
                 <li className="nav-item">
                   <a
-                    id="searchIcon"
-                    href="#"
-                    className="nav-link nav-link-search"
-                  ></a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link nav-link-bag"></a>
+                    className="nav-link ml-[1.5rem]"
+                    href="https://app.reactype.dev/#/signup"
+                  >
+                    Sign up
+                  </a>
                 </li>
               </ul>
-              <ul className="nav-list nav-list-mobile">
+              <ul className="nav-list nav-list-mobile flex">
                 <li className="left nav-item">
+                  <a href="#" className="nav-link nav-link-cb"></a>
+                </li>
+                <li className="right nav-item">
                   <div
                     className="mobile-menu"
                     onClick={() => toggleMobileMenu(!isMobileMenuOpen)}
@@ -192,9 +193,6 @@ const Navbar = () => {
                     <span className="line line-top"></span>
                     <span className="line line-bottom"></span>
                   </div>
-                </li>
-                <li className="right nav-item">
-                  <a href="#" className="nav-link nav-link-cb"></a>
                 </li>
               </ul>
             </nav>

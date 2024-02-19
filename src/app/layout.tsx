@@ -3,7 +3,6 @@
 import "./index.css";
 import React from "react";
 import { Inter } from "next/font/google";
-import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Transition from "./components/Transition";
 import { AnimatePresence, motion } from "framer-motion";
@@ -15,9 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en" className="w-full">
       <body className={inter.className}>
         <Navbar />
-        <motion.div initial="hidden" animate="visible">
-          {children}
-        </motion.div>
+        {children}
       </body>
     </html>
   );

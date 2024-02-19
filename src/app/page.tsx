@@ -1,3 +1,5 @@
+"use client";
+
 import Content from "./components/TestCar";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
@@ -6,6 +8,7 @@ import Testimonial from "./components/Testimonial";
 import TestBackground from "./components/TestBackground";
 import { heroBackgroundImage } from "./assets";
 import TestCar from "./components/TestCar";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -14,6 +17,7 @@ const Home = () => {
         <TestBackground />
         {/* <Hero /> */}
       </div>
+
       <section className="bg-black border-t-4 section-border-gradient">
         <Content />
       </section>

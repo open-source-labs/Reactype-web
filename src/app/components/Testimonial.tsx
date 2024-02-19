@@ -20,65 +20,62 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   designation,
   company,
   image,
-}) => {
-  return (
-    <div className="bg-white p-10 rounded-lg xs:w-[320px] w-full items-center mb-8 card-hover">
-      <p className="text-black font-black text-[48px]">"</p>
+}) => (
+  <div className="bg-white p-10 rounded-3xl xs:w-[320px] w-full items-center">
+    <p className="text-black font-black text-[48px]">"</p>
 
-      <div className="mt-1">
-        <p className="text-black tracking-wider text-[18px]">{testimonial}</p>
+    <div className="mt-1">
+      <p className="text-black tracking-wider text-[18px]">{testimonial}</p>
 
-        <div className="mt-7 flex justify-between items-center gap-1">
-          <div className="flex-1 flex flex-col">
-            <p className="text-black font-medium text-[16px]">
-              <span className="blue-text-gradient">@</span> {name}
-            </p>
-            <p className="mt-1 text-black text-[12px]">
-              {designation} of {company}
-            </p>
-          </div>
-
-          <img
-            src={image}
-            alt={`feedback_by-${name}`}
-            className="w-10 h-10 rounded-full object-cover"
-          />
+      <div className="mt-7 flex justify-between items-center gap-1">
+        <div className="flex-1 flex flex-col">
+          <p className="text-black font-medium text-[16px]">
+            <span className="blue-text-gradient">@</span> {name}
+          </p>
+          <p className="mt-1 text-secondary text-[12px]">
+            {designation} of {company}
+          </p>
         </div>
+
+        <img
+          src={image}
+          alt={`feedback_by-${name}`}
+          className="w-10 h-10 rounded-full object-cover"
+        />
       </div>
     </div>
-  );
-};
-
-const Testimonial: React.FC = () => {
+  </div>
+);
+const Feedbacks = () => {
   return (
     <div
-      className={`flex items-center justify-center lg:m-[10rem] sm:m-12 rounded-[20px] max-w-[70%] mx-auto`}
+      className={`mt-12 bg-[#363538] rounded-[20px] items-center lg:m-20 sm:m-2 sx:m-1`}
     >
       <div
-        className={`bg-[#0f0f0f] bg-swift-img rounded-2xl ${styles.padding} min-h-[300px] flex flex-col items-center`}
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px] flex flex-col items-center`}
       >
         <div className="text-center">
-          <p className={`${styles.sectionSubText} text-center text-[#6e6e73] `}>
-            some colleague{" "}
+          <p className={`${styles.sectionSubText} text-center`}>
+            some Colleague{" "}
           </p>
           <h2 className={`${styles.sectionHeadText} text-center`}>
             Endorsements...
           </h2>
         </div>
-        <div
-          className={`mt-20 pb-14 ${styles.paddingX} flex gap-7 lg:flex-row md:flex-col sm:flex-col w-full`}
-        >
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={testimonial.name}
-              index={index}
-              {...testimonial}
-            />
-          ))}
-        </div>
+      </div>
+      <div
+        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-start`}
+      >
+        {testimonials.map((testimonial, index) => (
+          <TestimonialCard
+            key={testimonial.name}
+            index={index}
+            {...testimonial}
+          />
+        ))}
       </div>
     </div>
   );
 };
 
-export default Testimonial;
+export default Feedbacks;
