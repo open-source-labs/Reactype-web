@@ -29,14 +29,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer
-      className="footer-bg-img h-[50vh] pt-20"
-      style={{
-        backgroundImage: `url(${footerSmallBackground.src})`,
-        backgroundPosition: " top",
-        backgroundSize: "100%",
-      }}
-    >
+    <footer>
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">

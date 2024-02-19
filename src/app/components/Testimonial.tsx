@@ -52,14 +52,14 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 const Testimonial: React.FC = () => {
   return (
     <div
-      className={`lg:m-[10rem] sm:m-12 bg-black-100 rounded-[20px] items-center flex`}
+      className={`flex items-center justify-center lg:m-[10rem] sm:m-12 rounded-[20px] max-w-[70%] mx-auto`}
     >
       <div
-        className={`bg-[#031c64] bg-swift-img rounded-2xl ${styles.padding} min-h-[300px] flex flex-col items-center`}
+        className={`bg-[#0f0f0f] bg-swift-img rounded-2xl ${styles.padding} min-h-[300px] flex flex-col items-center`}
       >
         <div className="text-center">
-          <p className={`${styles.sectionSubText} text-center`}>
-            some Colleague{" "}
+          <p className={`${styles.sectionSubText} text-center text-[#6e6e73] `}>
+            some colleague{" "}
           </p>
           <h2 className={`${styles.sectionHeadText} text-center`}>
             Endorsements...

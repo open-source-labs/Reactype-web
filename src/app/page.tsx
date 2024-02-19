@@ -1,10 +1,11 @@
-import Content from "./components/Content";
+import Content from "./components/TestCar";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Testimonial from "./components/Testimonial";
 import TestBackground from "./components/TestBackground";
 import { heroBackgroundImage } from "./assets";
+import TestCar from "./components/TestCar";
 
 const Home = () => {
   return (
@@ -13,17 +14,14 @@ const Home = () => {
         <TestBackground />
         {/* <Hero /> */}
       </div>
-      <section className=" border-t-4 section-border-gradient">
+      <section className="bg-black border-t-4 section-border-gradient">
         <Content />
       </section>
-      <section
-        className="hero-bg border-t-white"
-        style={{ backgroundImage: `url(${heroBackgroundImage})` }}
-      >
+      <section className="bg-black hero-bg border-t-4 section-border-gradient">
         <Features />
         <Testimonial />
       </section>
-      <section className="bg-[#f1efea] border-t-4 ">
+      <section className="bg-[#1d1d20] w-full h-[50vh] pt-20">
         <Footer />
       </section>
     </div>

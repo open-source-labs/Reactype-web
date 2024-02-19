@@ -18,13 +18,13 @@ const Hero = () => {
           className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5 bg`}
           style={{ zIndex: 2 }}
         >
-          <h1 className={`${styles.heroHeadText} white-text-grad text-center`}>
+          <h1 className={`${styles.heroHeadText} white-text-grad text-center `}>
             A Visual Prototyping
             <span className="text-img-main"> Tool For React </span>
             Developers
           </h1>
           <h3
-            className={`${styles.sectionSubText} text-center w-[53rem] gray-text-grad lg:mt-[-3rem] text-lg leading-8`}
+            className={`${styles.sectionSubText} text-center lg:w-[53rem] gray-text-grad lg:mt-[-3rem] text-lg leading-8`}
           >
             Built-in comprehensive type checking with TypeScript and flexible
             exporting.
