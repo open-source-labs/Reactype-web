@@ -6,20 +6,33 @@ import { styles } from "../style";
 import { bubbleHeroBackground, glassHero } from "../assets";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { AddCircleSharp } from "@mui/icons-material";
 
 const Hero = () => {
   const headerScrollRef = useRef(null);
+  const buttonScrollRef = useRef(null);
+
   const isHeaderInView = useInView(headerScrollRef);
+  const isButtonInView = useInView(buttonScrollRef);
+
   const mainControls = useAnimation();
+  const secondaryControls = useAnimation();
 
   useEffect(() => {
+    console.log(isHeaderInView);
+
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
+
+    isButtonInView
+      ? secondaryControls.start("visible")
+      : secondaryControls.start("hidden");
   }, [isHeaderInView]);
 
   return (
     <section
+      ref={headerScrollRef}
       className="relative w-full h-screen mx-auto hero-bg"
       style={{
         backgroundImage: `url(${bubbleHeroBackground.src})`,
@@ -27,7 +40,7 @@ const Hero = () => {
         backgroundPosition: "-1vh",
       }}
     >
-      <div ref={headerScrollRef} className="h-full w-full">
+      <div className="h-full w-full">
         <motion.div
           variants={{
             hidden: {
@@ -52,7 +65,10 @@ const Hero = () => {
           className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5 bg`}
           style={{ zIndex: 2 }}
         >
-          <h1 className={`${styles.heroHeadText} white-text-grad text-center `}>
+          <h1
+            ref={buttonScrollRef}
+            className={`${styles.heroHeadText} white-text-grad text-center `}
+          >
             A Visual Prototyping
             <span className="text-img-main"> Tool For React </span>
             Developers
@@ -105,6 +121,45 @@ const Hero = () => {
             </Button>
           </div>
           <Divider />
+        </motion.div>
+      </div>
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-10">
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 75,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 2.25,
+                delay: 0.5,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="mt-56 bg-[#363538] w-[22rem] h-[5rem] p-8 flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <span className="text-2xl flex items-center justify-center ml-[1rem]">
+            Explore Reactype{" "}
+          </span>
+          <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>
+            <AddCircleSharp
+              sx={{
+                color: "#0671e3",
+                fontSize: "3rem",
+              }}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>

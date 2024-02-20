@@ -25,7 +25,7 @@ const Home = () => {
         <Features />
         <Testimonial />
       </section>
-      <section className="bg-[#1d1d20] w-full h-[50vh] pt-20">
+      <section className="bg-[#252526] border-t-4 section-border-gradient w-full h-[50vh] pt-20">
         <Footer />
       </section>
     </div>

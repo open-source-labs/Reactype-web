@@ -94,8 +94,8 @@ const Features = () => {
               y: 0,
               transition: {
                 type: "spring",
-                duration: 2.75,
-                delay: 0.75,
+                duration: 1.5,
+                delay: 0.5,
               },
             },
           }}
@@ -160,7 +160,7 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.75,
+                delay: 0.5,
               },
             },
           }}
@@ -168,19 +168,6 @@ const Features = () => {
           animate={tertiaryControls}
           className="grid grid-cols-1 mt-10  sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 "
         >
-          {/* {features.map((feature, index) => (
-            <div key={index} className=" md:p-8 lg:p-14 text-center">
-              <div className="bg-[#141414] rounded-lg p-5 w-[18rem] h-[20rem] card-hover border-top-grey">
-                {feature.icon}
-                <h3 className="mt-12 text-xl font-bold text-gray-100 font-pj">
-                  {feature.title}
-                </h3>
-                <p className="mt-5 text-base text-gray-400 font-pj">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))} */}
           {features.map((feature, index) => (
             <div className="mx-auto">
               <FeatureCards index={index} />

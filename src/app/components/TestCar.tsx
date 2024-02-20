@@ -2,7 +2,11 @@
 
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
-import { ArrowBack, ArrowForward, NavigateNext } from "@mui/icons-material";
+import {
+  ArrowBackIos,
+  ArrowForwardIos,
+  NavigateNext,
+} from "@mui/icons-material";
 import { movingBubble } from "../assets";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import ContentCards from "../hoc/ContentCards";
@@ -12,7 +16,7 @@ import "swiper/css/free-mode";
 import { useMediaQuery } from "@mui/material";
 import { ServiceData } from "../constants";
 import { styles } from "../style";
-import { Carousel } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -20,32 +24,51 @@ const SwiperNavButtons = () => {
   const swiper = useSwiper();
 
   return (
-    <Carousel
-      className="rounded-xl mt-[10rem]"
-      navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="bg-[#363538] w-[30rem] h-[5rem] p-8 absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 rounded-[5rem]">
-          {ServiceData.map((_, i) => (
-            <span
-              key={i}
-              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i
-                  ? "h-[1rem] w-[5rem] bg-white"
-                  : "h-[1rem] w-[2rem] bg-white/50"
-              }`}
-              onClick={() => {
-                {
-                  swiper.activeIndex < activeIndex
-                    ? swiper.slidePrev()
-                    : swiper.slideNext();
-                }
-                console.log(swiper);
-                setActiveIndex(i);
-              }}
-            />
-          ))}
-        </div>
-      )}
-    />
+    // <Carousel
+    //   className="rounded-xl mt-[10rem]"
+    //   navigation={({ setActiveIndex, activeIndex, length }) => (
+    //     <div
+    //       className="bg-[#363538]  w-[30rem] h-[5rem] p-8 absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 rounded-[5rem] bg-opacity-80"
+    //       style={{ backdropFilter: "blur(10px)" }}
+    //     >
+    //       {ServiceData.map((_, i) => (
+    //         <span
+    //           key={i}
+    //           className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+    //             activeIndex === i
+    //               ? "h-[1rem] w-[5rem] bg-white"
+    //               : "h-[1rem] w-[2rem] bg-white/50"
+    //           }`}
+    //           onClick={() => {
+    //             {
+    //               swiper.activeIndex < activeIndex
+    //                 ? swiper.slidePrev()
+    //                 : swiper.slideNext();
+    //             }
+    //             console.log(swiper);
+    //             setActiveIndex(i);
+    //           }}
+    //         />
+    //       ))}
+    //     </div>
+    //   )}
+    // />
+    <div className="text-center mt-14">
+      <div className="flex justify-center">
+        <Button
+          className="bg-[#0671e3] rounded-full w-14 h-14 flex items-center justify-center m-3"
+          onClick={() => swiper.slidePrev()}
+        >
+          <ArrowBackIos className="text-white text-[1.8rem]" />
+        </Button>
+        <Button
+          className="bg-[#0671e3] rounded-full w-14 h-14 flex items-center justify-center m-3"
+          onClick={() => swiper.slideNext()}
+        >
+          <ArrowForwardIos className="text-white text-[1.8rem]" />
+        </Button>
+      </div>
+    </div>
   );
 };
 

@@ -1,78 +1,95 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { textVariant, fadeIn } from "../utils/motion";
-import { testimonials } from "../constants";
-import { styles } from "../style";
+import { computerRendering2 } from "../assets";
+import Image from "next/image";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { AddCircleSharp } from "@mui/icons-material";
 
-interface TestimonialCardProps {
-  index: number;
-  testimonial: string;
-  name: string;
-  designation: string;
-  company: string;
-  image: string;
-}
-
-const TestimonialCard: React.FC<TestimonialCardProps> = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
-  <div className="bg-white p-10 rounded-3xl xs:w-[320px] w-full items-center">
-    <p className="text-black font-black text-[48px]">"</p>
-
-    <div className="mt-1">
-      <p className="text-black tracking-wider text-[18px]">{testimonial}</p>
-
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-black font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-);
 const Feedbacks = () => {
+  const headerScrollRef = useRef(null);
+  const isHeaderInView = useInView(headerScrollRef);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    isHeaderInView
+      ? mainControls.start("visible")
+      : mainControls.start("hidden");
+  }, [isHeaderInView]);
+
   return (
     <div
-      className={`mt-12 bg-[#363538] rounded-[20px] items-center lg:m-20 sm:m-2 sx:m-1`}
+      ref={headerScrollRef}
+      className="relative flex items-center justify-center"
     >
-      <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px] flex flex-col items-center`}
+      <motion.div
+        variants={{
+          hidden: {
+            opacity: 0,
+            y: 75,
+            transition: {
+              type: "spring",
+              duration: 1.25,
+            },
+          },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 2.25,
+            },
+          },
+        }}
+        initial="hidden"
+        animate={mainControls}
       >
-        <div className="text-center">
-          <p className={`${styles.sectionSubText} text-center`}>
-            some Colleague{" "}
-          </p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>
-            Endorsements...
-          </h2>
-        </div>
-      </div>
+        <Image
+          src={computerRendering2}
+          alt="cube"
+          className="m-auto sm:display-none"
+        />
+      </motion.div>
       <div
-        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-start`}
+        ref={headerScrollRef}
+        className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-10"
       >
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard
-            key={testimonial.name}
-            index={index}
-            {...testimonial}
-          />
-        ))}
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 75,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 2.25,
+                delay: 1,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="mt-56 bg-[#363538] w-[22rem] h-[5rem] p-8 flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <span className="text-2xl flex items-center justify-center ml-[1rem]">
+            Dive into Reactype{" "}
+          </span>
+          <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>
+            <AddCircleSharp
+              sx={{
+                color: "#0671e3",
+                fontSize: "3rem",
+              }}
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

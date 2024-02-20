@@ -83,7 +83,6 @@ const FeatureCards: React.FC<Props> = ({ index }) => {
       <CardFooter className="mt-5 p-0 flex items-end justify-end">
         <Button
           size="lg"
-          color="black"
           className={`buy-button-${index} text-xl h-[3rem] w-[3rem] rounded-full shadow-xl`}
         >
           <NavigateNext />

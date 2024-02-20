@@ -24,6 +24,8 @@ import cursordGlassIcon from "./glass-icon-9.png";
 import switchdGlassIcon from "./glass-icon-10.png";
 import reactGlassIcon from "./glass-icon-11.png";
 import whiteLastBackground from "./white-background-footer.jpg";
+import computerRendering from "./reactype-in-comp.png";
+import computerRendering2 from "./comp-render-2.png"
 
 export {
   reacTypeLogoTwo,
@@ -51,5 +53,7 @@ export {
   cursordGlassIcon,
   switchdGlassIcon,
   reactGlassIcon,
-  whiteLastBackground
+  whiteLastBackground,
+  computerRendering,
+  computerRendering2
 };
