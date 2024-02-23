@@ -18,4 +18,17 @@ const styles = {
     "sm:text-[18px] text-[14px] text-black uppercase tracking-wider",
 };
 
-export { styles };
+const avatarColorArray = [
+  "#2fd64d",
+  "#1667d1",
+  "#fb4c64",
+  "#f0c000",
+  "#be5be8",
+  "#fe9c06",
+  "#f6352b",
+  "#1667d1",
+  "#1667d1",
+  "#50ed6a",
+];
+
+export { styles, avatarColorArray };
