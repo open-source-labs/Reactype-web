@@ -26,6 +26,7 @@ import reactGlassIcon from "./glass-icon-11.png";
 import whiteLastBackground from "./white-background-footer.jpg";
 import computerRendering from "./reactype-in-comp.png";
 import computerRendering2 from "./comp-render-2.png"
+import RlogoBlue from "./R-logo-blue-large-3.png"
 
 export {
   reacTypeLogoTwo,
@@ -55,5 +56,6 @@ export {
   reactGlassIcon,
   whiteLastBackground,
   computerRendering,
-  computerRendering2
+  computerRendering2,
+  RlogoBlue
 };

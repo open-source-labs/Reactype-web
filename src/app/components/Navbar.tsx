@@ -9,16 +9,11 @@ import { whiteLogoNoText } from "../assets";
 import Image from "next/image";
 import { dropDownMenuItems, dropDownMenuTitles } from "../constants";
 import Link from "next/link";
-import { AccountCircle } from "@mui/icons-material";
-import { ClassNames } from "@emotion/react";
-
 import {
-  reacTypeLogoTwo,
+  RlogoBlue,
   reacTypeLogoWithNoText,
   whiteReacTypeLogoTwo,
 } from "../assets";
-
-import { Menu } from "@mui/icons-material";
 
 interface NavigationItem {
   name: string;
@@ -46,6 +41,7 @@ const Navbar = () => {
           <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
             <Link href="/" className="mt-[2rem]">
               <Image
+                priority
                 src={
                   smallScreenSize
                     ? whiteReacTypeLogoTwo
@@ -183,7 +179,9 @@ const Navbar = () => {
               </ul>
               <ul className="nav-list nav-list-mobile flex">
                 <li className="left nav-item">
-                  <a href="#" className="nav-link nav-link-cb"></a>
+                  <a href="/" className="nav-link nav-link-cb">
+                    <Image src={RlogoBlue} alt="logo" className="w-10 mt-4" />
+                  </a>
                 </li>
                 <li className="right nav-item">
                   <div

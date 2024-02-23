@@ -169,7 +169,7 @@ const Features = () => {
           className="grid grid-cols-1 mt-10  sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 "
         >
           {features.map((feature, index) => (
-            <div className="mx-auto">
+            <div key={index} className="mx-auto">
               <FeatureCards index={index} />
             </div>
           ))}

@@ -1,5 +1,3 @@
-"use client";
-
 import Content from "./components/TestCar";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
@@ -12,7 +10,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div id="smooth-content" className="relative z-0">
+    <div className="relative z-0">
       <div className="bg-no-repeat bg-center section-border-gradient">
         <TestBackground />
         {/* <Hero /> */}

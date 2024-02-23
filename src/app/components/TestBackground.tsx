@@ -3,7 +3,7 @@
 import React from "react";
 import { Button, Divider } from "@mui/material";
 import { styles } from "../style";
-import { bubbleHeroBackground, glassHero } from "../assets";
+import { bubbleHeroBackground } from "../assets";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { AddCircleSharp } from "@mui/icons-material";
@@ -19,8 +19,6 @@ const Hero = () => {
   const secondaryControls = useAnimation();
 
   useEffect(() => {
-    console.log(isHeaderInView);
-
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
@@ -146,10 +144,10 @@ const Hero = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          className="mt-56 bg-[#363538] w-[22rem] h-[5rem] p-8 flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
+          className="mt-56 bg-[#363538] w-[19rem] h-[4rem] flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
           style={{ backdropFilter: "blur(10px)" }}
         >
-          <span className="text-2xl flex items-center justify-center ml-[1rem]">
+          <span className="text-xl flex items-center justify-center ml-[1rem]">
             Explore Reactype{" "}
           </span>
           <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>

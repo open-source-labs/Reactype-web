@@ -8,7 +8,7 @@ const TeamPage = () => {
     <div>
       <Navbar />
       <TeamCards />
-      <section className="bg-[#f1efea] border-t-4 section-border-gradient">
+      <section className="bg-[#252526] border-t-4 section-border-gradient w-full h-[50vh] pt-20">
         <Footer />
       </section>
     </div>
