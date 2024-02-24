@@ -46,10 +46,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -4.5rem 0 -5rem 0;
+  margin: -2.6rem 0 0 0;
   display: flex;
   flex-direction: flex-start;
-  width: 13rem;
+  width: 7.4rem;
 }
 
 .logo-image-small {
@@ -72,11 +72,7 @@
     #434343,
     #000000
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  );
+  background: linear-gradient(to right, #434343, #000000);
 }
 
 .blue-gradient {
@@ -110,11 +106,7 @@
     #f12711,
     #f5af19
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  );
+  background: linear-gradient(to top, #f12711, #f5af19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -153,11 +145,7 @@
     #11998e,
     #38ef7d
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #11998e,
-    #38ef7d
-  );
+  background: linear-gradient(to top, #11998e, #38ef7d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -170,11 +158,7 @@
     #2f80ed,
     #56ccf2
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  );
+  background: linear-gradient(to top, #2f80ed, #56ccf2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -186,11 +170,7 @@
     #ec008c,
     #fc6767
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  );
+  background: linear-gradient(to top, #ec008c, #fc6767);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -223,12 +203,7 @@
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  );
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (min-width: 360px) {
@@ -241,7 +216,7 @@ textarea::placeholder {
 
 .page-section {
   transition: filter 5.9s ease;
-  filter: blur(0); 
+  filter: blur(0);
 }
 
 .blur {
@@ -446,7 +421,7 @@ header {
   }
 
   .nav-link-cb {
-    width: 1.8rem;
+    width: 2.8rem;
     height: 4.9rem;
     position: relative;
     z-index: 1500;
@@ -609,7 +584,6 @@ footer a:hover {
 .swiper-section-container {
   width: 100%;
   margin: auto;
-
 }
 
 .swiper .res-slide {

@@ -7,7 +7,7 @@ import {
   ArrowForwardIos,
   NavigateNext,
 } from "@mui/icons-material";
-import { movingBubble } from "../assets";
+import { secondSectionBubble } from "../assets";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import ContentCards from "../hoc/ContentCards";
 import "swiper/css";
@@ -19,6 +19,7 @@ import { styles } from "../style";
 import { Button } from "@material-tailwind/react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Computer  from "../components/Computer";
 
 const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -27,13 +28,13 @@ const SwiperNavButtons = () => {
     <div className="text-center mt-14">
       <div className="flex justify-center">
         <Button
-          className="bg-[#0671e3] rounded-full w-14 h-14 flex items-center justify-center m-3"
+          className=" rounded-full w-14 h-14 flex items-center justify-center m-3"
           onClick={() => swiper.slidePrev()}
         >
           <ArrowBackIos className="text-white text-[1.8rem]" />
         </Button>
         <Button
-          className="bg-[#0671e3] rounded-full w-14 h-14 flex items-center justify-center m-3"
+          className=" rounded-full w-14 h-14 flex items-center justify-center m-3"
           onClick={() => swiper.slideNext()}
         >
           <ArrowForwardIos className="text-white text-[1.8rem]" />
@@ -103,32 +104,32 @@ const TestCar = () => {
         animate={mainControls}
         className="flex flex-wrap items-center justify-between"
       >
-        <div className="w-full  lw-full py-20 md:mx-auto sm:mx-auto max-w-4xl">
+        <div className="w-full py-20 md:mx-auto sm:mx-auto max-w-4xl">
           <h2
             className={`${styles.sectionHeadText} lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0`}
           >
             The fastest way to develop effective software.
           </h2>
           <p
-            className={`${styles.sectionSubText} mt-6 text-xl leading-8 text-[#86868b] w-[25rem]`}
+            className={`${styles.sectionSubText} mt-6 text-xl leading-8 text-[#86868b] lg:w-[44%] sm:w-full`}
           >
-            ReacType is a prototyping tool that allows users to{" "}
-            <span className="text-white">visualize their application </span>
-            architecture dynamically, employing a drag-and-drop canvas display
-            and an interactive, <span className="text-white">
-              real-time
-            </span>{" "}
-            component code preview.
+            ReacType is an innovative prototyping tool that empowers users to
+            dynamically visualize their application architecture. With its
+            intuitive drag-and-drop canvas interface and interactive, real-time
+            component code preview, ReacType facilitates seamless collaboration
+            and connection with peers.
           </p>
         </div>
         {smallScreenSize ? (
           <Image
-            src={movingBubble}
+            src={secondSectionBubble}
             alt="cube"
             className="w-[25rem] mr-auto sm:display-none"
           />
         ) : null}
       </motion.div>
+
+      <Computer isCompInMiddle={true}/>
 
       <div
         ref={cardsSwiperScrollRef}
@@ -171,7 +172,6 @@ const TestCar = () => {
                   <ContentCards
                     index={index}
                     header={data.header}
-                    title={data.title}
                     content={data.content}
                     key={index}
                   />

@@ -1,20 +1,13 @@
 import {
-  cloudGlassIcon,
-  dnaGlassIcon,
-  folderGlassIcon,
-  coneGlassIcon,
-  shieldGlassIcon,
-  cursordGlassIcon,
-  switchdGlassIcon,
-  reactGlassIcon,
-  houseGlassIcon,
-} from "../assets";
-import {
   Home,
+  Terminal,
   Security,
-  AddCircle,
+  ViewInAr,
+  Groups,
   Cloud,
+  Repeat,
   LaptopMac,
+  PestControl
 } from "@mui/icons-material";
 
 const navLinks = [
@@ -32,69 +25,63 @@ const navLinks = [
   },
 ];
 
+const iconArray = [
+  <Home sx={{ fontSize: "4rem", color: "#2fd64d" }} />,
+  <Terminal sx={{ fontSize: "4rem", color: "#1d97f7" }}/>,
+  <Cloud sx={{ fontSize: "4rem", color: "#f0c000" }} />,
+  <ViewInAr sx={{ fontSize: "4rem", color: "#fb4c64" }} />,
+  <Groups sx={{ fontSize: "4rem", color: "#1667d1" }} />,
+  <Security sx={{ fontSize: "4rem", color: "#be5be8" }} />,
+  <LaptopMac sx={{ fontSize: "4rem", color: "#fe9c06" }} />,
+  <Repeat sx={{ fontSize: "4rem", color: "#f6352b" }} />,
+  <PestControl sx={{ fontSize: "4rem", color: "#50ed6a" }} />,
+];
+
 const ServiceData = [
   {
-    header: "A home for your code",
-    background: houseGlassIcon,
-    title: "Development",
+    header: "A Home For Your Code",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Transform Reactype into your centralized hub for all coding projects. Seamlessly import and export your projects, ensuring effortless collaboration and the freedom to resume work whenever inspiration strikes.",
   },
   {
     header: "React, Gatsby, and Next",
-    background: reactGlassIcon,
-    title: "Development",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Enhance Reactype with Next.js's powerful features by integrating Next.js specific Link and Image components. Connect users directly to their created pages with efficient routing.",
   },
   {
-    header: "Cloud based",
-    background: cloudGlassIcon,
-    title: "Branding",
+    header: "Cloud Based",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "We harnesses the power of the cloud, providing seamless access to projects from anywhere which enables useres to collaborate effortlessly, enhancing productivity and flexibility.",
   },
   {
-    header: "System integrated",
-    background: dnaGlassIcon,
-    title: "Design",
+    header: "D3 Visualization",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Explore dynamically generated components in the component tree view. Additionally, dive into the State Management Tab to visualize a D3 state flow diagram, providing insights into your application's architecture.",
   },
   {
-    header: "Save, import, and export",
-    background: folderGlassIcon,
-    title: "Seo",
+    header: "Collaborative Workspace",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Engage in collaborative coding sessions by joining dedicated rooms where users can seamlessly code, chat, or even conduct real-time video conferences, fostering productive and efficient teamwork.",
   },
   {
-    header: "Safe and secure",
-    background: shieldGlassIcon,
-    title: "Management",
+    header: "Safe and Secure",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "With industry-leading authorization and authentication practices this robust implementation ensures protection against unauthorized access, safeguarding users' information and projects.",
   },
   {
-    header: "Connect with others",
-    background: cursordGlassIcon,
-    title: "Production",
+    header: "Automated Testing",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "The package includes pre-configured Webpack, Jest, and TypeScript files, along with meticulously crafted tests, ensuring reliability and robustness for your project launch period.",
   },
   {
-    header: "Connect with others",
-    background: switchdGlassIcon,
-    title: "Production",
+    header: "State Management",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Effortlessly manage state, ensuring streamlined state management across your application. Simplify prop passing from parent components, enhancing code readability and maintainability.",
   },
   {
-    header: "Connect with others",
-    background: coneGlassIcon,
-    title: "Production",
+    header: "Debug",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "View stack traces, visualize query runs over time, inspect app state, and drill into all dependencies. Version control changes in Reactype with Git and use PRs to merge updates.",
   },
 ];
 
@@ -653,7 +640,7 @@ const people = [
     firstName: "Eliza",
     lastName: "Zhang",
     github: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/yameng-zhang612/",
   },
 ];
 
@@ -766,6 +753,7 @@ const features = [
 
 export {
   navLinks,
+  iconArray,
   testimonials,
   dropDownMenuTitles,
   dropDownMenuItems,

@@ -1,38 +1,89 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
+import { Button, Divider } from "@mui/material";
 import { styles } from "../style";
-import { Button } from "@mui/material";
-import { heroBackgroundImage } from "../assets";
+import { bubbleHeroBackground } from "../assets";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { AddCircleSharp } from "@mui/icons-material";
 
 const Hero = () => {
+  const headerScrollRef = useRef(null);
+  const buttonScrollRef = useRef(null);
+
+  const isHeaderInView = useInView(headerScrollRef);
+  const isButtonInView = useInView(buttonScrollRef);
+
+  const mainControls = useAnimation();
+  const secondaryControls = useAnimation();
+
+  useEffect(() => {
+    isHeaderInView
+      ? mainControls.start("visible")
+      : mainControls.start("hidden");
+
+    isButtonInView
+      ? secondaryControls.start("visible")
+      : secondaryControls.start("hidden");
+  }, [isHeaderInView]);
+
   return (
     <section
+      ref={headerScrollRef}
       className="relative w-full h-screen mx-auto hero-bg"
-      style={{ backgroundImage: `url(${heroBackgroundImage})` }}
+      style={{
+        backgroundImage: `url(${bubbleHeroBackground.src})`,
+        backgroundSize: "cover", // or "contain"
+        backgroundPosition: "-1vh",
+      }}
     >
-      <div className="absolute h-full w-full bg-[radial-gradient(#eed4c3_1.2px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] ">
-        <div
-          className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5`}
+      <div className="h-full w-full">
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: -300,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: -350,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 max-w-7xl mx-auto flex flex-col items-center gap-5 bg`}
+          style={{ zIndex: 2 }}
         >
           <h1
-            className={`${styles.heroHeadText} text-img text-center text-[#031c64]`}
+            ref={buttonScrollRef}
+            className={`${styles.heroHeadText} white-text-grad text-center `}
           >
-            A Visual Prototyping<span className="text-[#0670e0]"> </span>
-            <span className="text-[#0670e0]">Tool For React</span> Developers
+            A Visual Prototyping
+            <span className="text-img-main"> Tool For React </span>
+            Developers
           </h1>
-          <h3
-            className={`${styles.sectionSubText} text-center w-[53rem] text-black mt-[-3rem] text-lg leading-8`}
+          <p
+            className={`${styles.sectionSubText} text-center text-xl leading-8 text-[#86868b] lg:mt-[-3rem] mb-5`}
           >
             Built-in comprehensive type checking with TypeScript and flexible
-            exporting in Classic React, Next.js, or Gatsby.js
-          </h3>
-          <div className="flex flex-row">
+            exporting.
+          </p>
+          <div className="flex flex-row" style={{ zIndex: 2 }}>
             <Button
-              className="dark-button"
+              href="http://localhost:8080/#/signup"
+              className="blue-button shadow-2xl"
               variant="contained"
               sx={{
                 margin: "0.8rem",
-                backgroundColor: "#031c64",
                 borderRadius: "5rem",
                 width: "8rem",
                 height: "3rem",
@@ -40,7 +91,7 @@ const Hero = () => {
                 font: "bold",
                 textTransform: "none",
                 "&:hover": {
-                  backgroundColor: "#0670e0",
+                  backgroundColor: "#1372d0",
                 },
               }}
             >
@@ -50,24 +101,64 @@ const Hero = () => {
               variant="outlined"
               sx={{
                 margin: "0.8rem",
-                color: "black",
+                color: "white",
                 borderRadius: "5rem",
-                border: "1px solid black",
+                border: "2px solid white",
                 width: "8rem",
                 height: "3rem",
                 fontSize: "1rem",
                 font: "bold",
                 textTransform: "none",
                 "&:hover": {
-                  backgroundColor: "#a5bdd6",
-                  border: "1px solid black",
+                  backgroundColor: "#9b97a4",
+                  border: "2px solid white",
                 },
               }}
             >
               Talk To Us
             </Button>
           </div>
-        </div>
+          <Divider />
+        </motion.div>
+      </div>
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-10">
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 75,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+              },
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 2.25,
+                delay: 0.5,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="mt-56 bg-[#363538] w-[19rem] h-[4rem] flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
+          <span className="text-xl flex items-center justify-center ml-[1rem]">
+            Explore Reactype{" "}
+          </span>
+          <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>
+            <AddCircleSharp
+              sx={{
+                color: "#0671e3",
+                fontSize: "3rem",
+              }}
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

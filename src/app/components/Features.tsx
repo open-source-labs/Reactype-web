@@ -6,8 +6,11 @@ import FeatureCards from "./FeatureCards";
 import { styles } from "../style";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useMediaQuery } from "@mui/material";
 
 const Features = () => {
+  const isSmallScreenSize = useMediaQuery("(min-width:967px)");
+
   const headerScrollRef = useRef(null);
   const middleSectionRef = useRef(null);
   const bottomScrollRef = useRef(null);
@@ -104,43 +107,51 @@ const Features = () => {
           className="grid grid-cols-1 mt-10  sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-2 md:gap-0 xl:mt-24 "
         >
           <div>
-            <p className="lg:text-[22px] text-[#6e6e73] mt-10">With over</p>
-            <h2 className="lg:text-[44px] tracking-tight text-[#f5f5f7]">
+            <p className="text-[22px] text-[#6e6e73] mt-10">With over</p>
+            <h2 className="text-[44px] tracking-tight text-[#f5f5f7]">
               300+ stars on GitHub
             </h2>
             <p className="lg:text-[22px] text-[#6e6e73]">
-              Our team is always growing{" "}
+              our team is always growing{" "}
             </p>
           </div>
 
-          <div className="">
-            <p className="pt-10 lg:text-[44px] tracking-tight text-white leading-7 sm:mt-8 font-pj">
-              <br />
-              Lorem ipsum dolor acedfl
-            </p>
-          </div>
+          {isSmallScreenSize ? (
+            <div className="">
+              <p className="pt-10 lg:text-[44px] tracking-tight text-white leading-7 sm:mt-8 font-pj">
+                <br />
+                Unlock development at scale
+              </p>
+            </div>
+          ) : null}
 
           <div>
-            <p className="lg:text-[22px] text-[#6e6e73] mt-10">and more than</p>
-            <h2 className="lg:text-[44px] tracking-tight text-[#f5f5f7]">
+            <p className="text-[22px] text-[#6e6e73] mt-10">and more than</p>
+            <h2 className="text-[44px] tracking-tight text-[#f5f5f7]">
               10 core technologies
             </h2>
             <p className="lg:text-[22px] text-[#6e6e73]">
-              we know how to build it
+              we know how to build it.
             </p>
           </div>
 
           <div className="">
+            {isSmallScreenSize ? null : (
+              <div className="">
+                <p className="pt-10 text-[34px] tracking-tight text-white leading-7 font-pj pb-10">
+                  <br />
+                  Unlock development at scale
+                </p>
+              </div>
+            )}
             <hr className="w-full mb-10" />
             <p className=" text-xl leading-7 text-[#6e6e73]">
-              ReacType is a prototyping tool that allows users to visualize
-              their application architecture dynamically, employing a
-              drag-and-drop canvas display and an interactive, real-time
-              component code preview.
+              Help your team spend more time innovating—and finally clear the
+              backlog. Reactype is your application layer for building secure
+              and standardized business software faster.
             </p>
           </div>
         </motion.div>
-
         <motion.div
           ref={bottomScrollRef}
           viewport={{ root: bottomScrollRef }}

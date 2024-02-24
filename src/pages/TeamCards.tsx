@@ -4,18 +4,14 @@ import { Avatar } from "@mui/material";
 import { avatarColorArray } from "@/app/style";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import axios from 'axios';
-import cheerio from 'cheerio';
+import axios from "axios";
+import cheerio from "cheerio";
 
 interface People {
   firstName: string;
   lastName: string;
   github?: string;
   linkedin?: string;
-}
-
-interface PeopleWithImage extends People {
-  imageUrl?: string;
 }
 
 const filterAndSortContributors = (contributors: People[]): People[] =>
@@ -29,31 +25,6 @@ const filterAndSortContributors = (contributors: People[]): People[] =>
   });
 
 const Team = () => {
-  const [peopleWithImages, setPeopleWithImages] = useState<PeopleWithImage[]>(
-    []
-  );
-
-  useEffect(() => {
-    const fetchLinkedInImages = async () => {
-      const updatedPeople: PeopleWithImage[] = [];
-      for (const person of people) {
-        try {
-          const response = await axios.get(person.linkedin);
-          const html = response.data;
-          const $ = cheerio.load(html);
-          const imageUrl = $('meta[property="og:image"]').attr("content");
-          updatedPeople.push({ ...person, imageUrl });
-        } catch (error) {
-          console.error(
-            `Error fetching LinkedIn image for ${person.firstName} ${person.lastName}: ${error}`
-          );
-        }
-      }
-      setPeopleWithImages(updatedPeople);
-    };
-    fetchLinkedInImages();
-  }, []);
-
   const sortedPeople = filterAndSortContributors(people);
 
   return (
@@ -111,8 +82,8 @@ const Team = () => {
                           fontSize="large"
                           className="hover:text-[#86868b]"
                         />
+                      <span className="hover:underline ml-2">GitHub</span>
                       </a>
-                      <span className="text-white hover:underline">GitHub</span>
                     </div>
                     <div className="flex items-center mt-2 text-white">
                       <a
@@ -123,8 +94,8 @@ const Team = () => {
                           fontSize="large"
                           className="hover:text-[#86868b]"
                         />
+                      <span className="ml-2 hover:underline">LinkedIn</span>
                       </a>
-                      <span className="hover:underline">LinkedIn</span>
                     </div>
                   </div>
                 </div>

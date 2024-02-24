@@ -1,19 +1,14 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { styles } from "../style";
-import DropDown from "../hoc/DropDown";
 import { Button } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { whiteLogoNoText } from "../assets";
 import Image from "next/image";
-import { dropDownMenuItems, dropDownMenuTitles } from "../constants";
 import Link from "next/link";
-import {
-  RlogoBlue,
-  reacTypeLogoWithNoText,
-  whiteReacTypeLogoTwo,
-} from "../assets";
+import { ReactypeAppIcon, blueWhiteBackgroundR } from "../assets";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 interface NavigationItem {
   name: string;
@@ -42,84 +37,70 @@ const Navbar = () => {
             <Link href="/" className="mt-[2rem]">
               <Image
                 priority
-                src={
-                  smallScreenSize
-                    ? whiteReacTypeLogoTwo
-                    : reacTypeLogoWithNoText
-                }
+                src={blueWhiteBackgroundR}
                 alt="logo"
-                className={`h-${
-                  smallScreenSize ? 8 : 4
-                }rem object-contain flex flex-start ${
+                className={`h-[3.5rem] object-contain flex flex-start ${
                   smallScreenSize ? "logo-image" : "logo-image-small"
                 }`}
               />
             </Link>
             {mediumScreenSize && (
               <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
-                {/* Assuming dropDownMenuTitles and dropDownMenuItems are defined */}
-                {dropDownMenuTitles.map((title, i) => (
-                  <DropDown
-                    key={i}
-                    title={title}
-                    dropDownMenuItems={dropDownMenuItems[i]}
-                  />
-                ))}
-                <div className="white-text-grad relative flex flex-row items-center rounded-sm">
+                <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
                     href="/Team"
-                    className="p-4 w-full flex items-center font-medium hover:text-[#0670e0] duration-300 text-lg cursor-pointer"
+                    className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
+                  >
+                    Solutions
+                  </a>
+                </li>
+                <li className="text-grey relative flex flex-row items-center rounded-sm">
+                  <a
+                    href="https://react.dev/learn"
+                    className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
+                  >
+                    Learn
+                  </a>
+                </li>
+                <li className="text-grey relative flex flex-row items-center rounded-sm">
+                  <a
+                    href="/Team"
+                    className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
+                  >
+                    About
+                  </a>
+                </li>
+                <li className="text-grey relative flex flex-row items-center rounded-sm">
+                  <a
+                    href="/Team"
+                    className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     Our Team
                   </a>
-                </div>
+                </li>
               </ul>
             )}
             <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
               <li>
-                <a href="https://app.reactype.dev/#/login">
-                  <Button
-                    className="white-button shadow-2xl"
-                    variant="contained"
+                <a href="https://github.com/open-source-labs/ReacType">
+                  <GitHub
                     sx={{
-                      margin: "0.8rem -1rem 0.8rem 0.8rem",
-                      borderRadius: "5rem",
-                      width: "6rem",
-                      height: "3rem",
-                      fontSize: "1rem",
-                      font: "bold",
-                      textTransform: "none",
-                      "&:hover": {
-                        backgroundColor: "#bdb7c7",
-                      },
+                      fontSize: "2.5rem",
+                      color: "white",
+                      "&:hover": { color: "#86868b" },
                     }}
-                  >
-                    Log in
-                  </Button>
+                  />
                 </a>
               </li>
               <li>
-                <a href="https://app.reactype.dev/#/signup">
-                  <Button
-                    variant="outlined"
+                <a href="https://www.linkedin.com/company/reactype">
+                  <LinkedIn
                     sx={{
-                      margin: "0.8rem",
+                      fontSize: "2.5rem",
                       color: "white",
-                      borderRadius: "5rem",
-                      border: "2px solid white",
-                      width: "6rem",
-                      height: "3rem",
-                      fontSize: "1rem",
-                      font: "bold",
-                      textTransform: "none",
-                      "&:hover": {
-                        backgroundColor: "#9b97a4",
-                        border: "2px solid white",
-                      },
+                      "&:hover": { color: "#86868b" },
                     }}
-                  >
-                    Sign up
-                  </Button>
+                  />
                 </a>
               </li>
             </ul>
@@ -133,7 +114,6 @@ const Navbar = () => {
           <div className="container m-10">
             <nav className="nav">
               <ul className="nav-list nav-list-larger">
-                {/* Assuming whiteLogoNoText is defined */}
                 {smallScreenSize && (
                   <li className="nav-item flex-start">
                     <a href="/" className="mt-[2rem]">
@@ -156,7 +136,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/Team" className="nav-link">
                     Our Team
                   </a>
                 </li>
@@ -180,7 +160,11 @@ const Navbar = () => {
               <ul className="nav-list nav-list-mobile flex">
                 <li className="left nav-item">
                   <a href="/" className="nav-link nav-link-cb">
-                    <Image src={RlogoBlue} alt="logo" className="w-10 mt-4" />
+                    <Image
+                      src={blueWhiteBackgroundR}
+                      alt="logo"
+                      className=" mt-4"
+                    />
                   </a>
                 </li>
                 <li className="right nav-item">
