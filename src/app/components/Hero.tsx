@@ -7,6 +7,7 @@ import { bubbleHeroBackground } from "../assets";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { AddCircleSharp } from "@mui/icons-material";
+import GoogleGeminiEffectDemo from "./MatrixBackground";
 
 const Hero = () => {
   const headerScrollRef = useRef(null);
@@ -31,12 +32,12 @@ const Hero = () => {
   return (
     <section
       ref={headerScrollRef}
-      className="relative w-full h-screen mx-auto hero-bg"
-      style={{
-        backgroundImage: `url(${bubbleHeroBackground.src})`,
-        backgroundSize: "cover", // or "contain"
-        backgroundPosition: "-1vh",
-      }}
+      className="relative w-full h-screen mx-auto hero-bg bg-black"
+      // style={{
+      //   backgroundImage: `url(${bubbleHeroBackground.src})`,
+      //   backgroundSize: "cover", // or "contain"
+      //   backgroundPosition: "-1vh",
+      // }}
     >
       <div className="h-full w-full">
         <motion.div

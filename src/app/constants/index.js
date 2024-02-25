@@ -87,30 +87,31 @@ const ServiceData = [
 
 const testimonials = [
   {
-    testimonial:
+    quote:
       "I thought it was impossible to make an app as beautiful as our product, but the Reactype team proved me wrong.",
     name: "Sara Lee",
-    designation: "CFO",
+    title: "CFO",
     company: "Acme Co",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    testimonial:
+    quote:
       "I've never met a web developement team who truly cares about their clients' success.",
     name: "Chris Brown",
-    designation: "COO",
+    title: "COO",
     company: "DEF Corp",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
-    testimonial:
+    quote:
       "After the Reactype team optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
-    designation: "CTO",
+    title: "CTO",
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
+
 
 const dropDownMenuTitles = ["Solutions", "Learn", "About"];
 const dropDownMenuItems = [

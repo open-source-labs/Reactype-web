@@ -129,7 +129,7 @@ const TestCar = () => {
         ) : null}
       </motion.div>
 
-      <Computer isCompInMiddle={true}/>
+      {/* <Computer isCompInMiddle={true}/> */}
 
       <div
         ref={cardsSwiperScrollRef}

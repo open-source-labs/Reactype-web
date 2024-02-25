@@ -17,8 +17,6 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    console.log({ isCompInMiddle });
-
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
