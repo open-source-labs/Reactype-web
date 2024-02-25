@@ -67,6 +67,7 @@ const Features = () => {
           animate={mainControls}
           className="text-center"
         >
+          
           <h2 className={`${styles.heroHeadText} white-text-grad text-center `}>
             Make Every Step User-Centric
           </h2>

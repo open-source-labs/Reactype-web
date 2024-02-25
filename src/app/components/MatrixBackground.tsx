@@ -7,7 +7,6 @@ import { AddCircleSharp } from "@mui/icons-material";
 
 const GoogleGeminiEffectDemo = () => {
   const ref = useRef(null);
-  const headerScrollRef = useRef(null);
   const isHeaderInView = useInView(ref);
   const mainControls = useAnimation();
   const { scrollYProgress } = useScroll({
@@ -16,7 +15,6 @@ const GoogleGeminiEffectDemo = () => {
   });
 
   useEffect(() => {
-    console.log(scrollYProgress);
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
@@ -33,6 +31,7 @@ const GoogleGeminiEffectDemo = () => {
       className="h-[200vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
+      
       <GoogleGeminiEffect
         pathLengths={[
           pathLengthFirst,
