@@ -129,14 +129,14 @@ const Footer = () => {
           </span>
           <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a
-              href="#"
+              href="https://github.com/open-source-labs/ReacType"
               className="text-white hover:text-gray-400"
             >
               <GitHub />
               <span className="sr-only">GitHub page</span>
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/reactype"
               className="text-white hover:text-gray-400"
             >
               <LinkedIn />

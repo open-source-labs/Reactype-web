@@ -65,7 +65,7 @@ export const GoogleGeminiEffect = ({
           Try Here
         </Button>
         <Button
-          href="/Team"
+          href="/team"
           variant="outlined"
           className="shadow-2xl z-30"
           sx={{

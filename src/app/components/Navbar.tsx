@@ -47,7 +47,7 @@ const Navbar = () => {
               <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
-                    href="/Team"
+                    href="https://nextjs.org/"
                     className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     Solutions
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </li>
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
-                    href="https://react.dev/learn"
+                    href="https://nextjs.org/learn"
                     className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     Learn
@@ -63,7 +63,7 @@ const Navbar = () => {
                 </li>
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
-                    href="/Team"
+                    href="/about"
                     className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     About
@@ -125,17 +125,17 @@ const Navbar = () => {
                   </li>
                 )}
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="https://nextjs.org/" className="nav-link">
                     Solutions
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="https://nextjs.org/learn/" className="nav-link">
                     Learn
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="/Team" className="nav-link">
+                  <a href="/team" className="nav-link">
                     Our Team
                   </a>
                 </li>
