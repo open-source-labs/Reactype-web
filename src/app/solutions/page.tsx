@@ -3,7 +3,7 @@ import Solutions from "./Solutions";
 import Navbar from "../components/Navbar";
 import Footer from "@/app/components/Footer";
 
-const AboutPage = () => {
+const SolutionsPage = () => {
   return (
     <div>
       <Navbar />
@@ -17,4 +17,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default SolutionsPage;

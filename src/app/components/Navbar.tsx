@@ -45,7 +45,6 @@ const Navbar = () => {
             </Link>
             {mediumScreenSize && (
               <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
-               
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
                     href="/solutions"
@@ -118,13 +117,8 @@ const Navbar = () => {
                   </li>
                 )}
                 <li className="nav-item">
-                  <a href="https://nextjs.org/" className="nav-link">
+                  <a href="/solutions" className="nav-link">
                     Solutions
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="https://nextjs.org/learn/" className="nav-link">
-                    Learn
                   </a>
                 </li>
                 <li className="nav-item">
