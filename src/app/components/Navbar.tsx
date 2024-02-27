@@ -45,20 +45,13 @@ const Navbar = () => {
             </Link>
             {mediumScreenSize && (
               <ul className="list-none hidden sm:flex flex-row gap-10 sm:none">
+               
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
-                    href="https://nextjs.org/"
+                    href="/solutions"
                     className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     Solutions
-                  </a>
-                </li>
-                <li className="text-grey relative flex flex-row items-center rounded-sm">
-                  <a
-                    href="https://nextjs.org/learn"
-                    className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
-                  >
-                    Learn
                   </a>
                 </li>
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
