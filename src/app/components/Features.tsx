@@ -35,7 +35,14 @@ const Features = () => {
     isBottomInView
       ? tertiaryControls.start("visible")
       : tertiaryControls.start("hidden");
-  }, [isHeaderInView, isMiddleSectionInView, isBottomInView]);
+  }, [
+    isHeaderInView,
+    isMiddleSectionInView,
+    isBottomInView,
+    mainControls,
+    secondaryControls,
+    tertiaryControls,
+  ]);
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-black">
@@ -67,7 +74,6 @@ const Features = () => {
           animate={mainControls}
           className="text-center"
         >
-          
           <h2 className={`${styles.heroHeadText} white-text-grad text-center `}>
             Make Every Step User-Centric
           </h2>

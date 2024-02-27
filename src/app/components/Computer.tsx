@@ -20,7 +20,7 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
-  }, [isHeaderInView]);
+  }, [isHeaderInView, mainControls, headerScrollRef]);
 
   return (
     <div

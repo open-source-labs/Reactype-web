@@ -1,11 +1,8 @@
-import "../app/globals.css";
-import { people } from "../app/constants";
+import "../../app/globals.css";
+import { people } from "../constants";
 import { Avatar } from "@mui/material";
 import { avatarColorArray } from "@/app/style";
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import cheerio from "cheerio";
 
 interface People {
   firstName: string;
@@ -82,7 +79,7 @@ const Team = () => {
                           fontSize="large"
                           className="hover:text-[#86868b]"
                         />
-                      <span className="hover:underline ml-2">GitHub</span>
+                        <span className="hover:underline ml-2">GitHub</span>
                       </a>
                     </div>
                     <div className="flex items-center mt-2 text-white">
@@ -94,7 +91,7 @@ const Team = () => {
                           fontSize="large"
                           className="hover:text-[#86868b]"
                         />
-                      <span className="ml-2 hover:underline">LinkedIn</span>
+                        <span className="ml-2 hover:underline">LinkedIn</span>
                       </a>
                     </div>
                   </div>

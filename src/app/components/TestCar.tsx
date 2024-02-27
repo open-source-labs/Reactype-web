@@ -71,7 +71,14 @@ const TestCar = () => {
     isBottomInView
       ? tertiaryControls.start("visible")
       : tertiaryControls.start("hidden");
-  }, [isHeaderInView, isCardsSwiperInView, isBottomInView]);
+  }, [
+    isHeaderInView,
+    isCardsSwiperInView,
+    isBottomInView,
+    mainControls,
+    secondaryControls,
+    tertiaryControls,
+  ]);
 
   return (
     <section

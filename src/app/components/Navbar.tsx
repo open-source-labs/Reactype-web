@@ -17,7 +17,7 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
-  { name: "teamPage", href: "/team", current: false },
+  { name: "teamPage", href: "/Team", current: false },
 ];
 
 const Navbar = () => {
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </li>
                 <li className="text-grey relative flex flex-row items-center rounded-sm">
                   <a
-                    href="/Team"
+                    href="/team"
                     className="p-4 w-full flex items-center font-medium hover:text-[#86868b] duration-300 text-lg cursor-pointer"
                   >
                     Our Team
@@ -159,11 +159,7 @@ const Navbar = () => {
               <ul className="nav-list nav-list-mobile flex">
                 <li className="left nav-item">
                   <a href="/" className="nav-link nav-link-cb">
-                    <Image
-                      src={SFRTNoText}
-                      alt="logo"
-                      className=" mt-4"
-                    />
+                    <Image src={SFRTNoText} alt="logo" className=" mt-4" />
                   </a>
                 </li>
                 <li className="right nav-item">

@@ -26,15 +26,15 @@ const navLinks = [
 ];
 
 const iconArray = [
-  <Home sx={{ fontSize: "4rem", color: "#2fd64d" }} />,
-  <Terminal sx={{ fontSize: "4rem", color: "#1d97f7" }}/>,
-  <Cloud sx={{ fontSize: "4rem", color: "#f0c000" }} />,
-  <ViewInAr sx={{ fontSize: "4rem", color: "#fb4c64" }} />,
-  <Groups sx={{ fontSize: "4rem", color: "#1667d1" }} />,
-  <Security sx={{ fontSize: "4rem", color: "#be5be8" }} />,
-  <LaptopMac sx={{ fontSize: "4rem", color: "#fe9c06" }} />,
-  <Repeat sx={{ fontSize: "4rem", color: "#f6352b" }} />,
-  <PestControl sx={{ fontSize: "4rem", color: "#50ed6a" }} />,
+  <Home key="1" sx={{ fontSize: "4rem", color: "#2fd64d" }} />,
+  <Terminal key="2" sx={{ fontSize: "4rem", color: "#1d97f7" }}/>,
+  <Cloud key="3" sx={{ fontSize: "4rem", color: "#f0c000" }} />,
+  <ViewInAr key="4" sx={{ fontSize: "4rem", color: "#fb4c64" }} />,
+  <Groups key="5" sx={{ fontSize: "4rem", color: "#1667d1" }} />,
+  <Security key="6" sx={{ fontSize: "4rem", color: "#be5be8" }} />,
+  <LaptopMac key="7" sx={{ fontSize: "4rem", color: "#fe9c06" }} />,
+  <Repeat key="8" sx={{ fontSize: "4rem", color: "#f6352b" }} />,
+  <PestControl key="9" sx={{ fontSize: "4rem", color: "#50ed6a" }} />,
 ];
 
 const ServiceData = [

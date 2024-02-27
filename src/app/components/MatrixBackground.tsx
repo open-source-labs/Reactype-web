@@ -18,7 +18,7 @@ const GoogleGeminiEffectDemo = () => {
     isHeaderInView
       ? mainControls.start("visible")
       : mainControls.start("hidden");
-  }, [isHeaderInView]);
+  }, [isHeaderInView, mainControls, ref]);
 
   const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 2.0]);
   const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 2.1]);
