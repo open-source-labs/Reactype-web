@@ -18,8 +18,8 @@ const Home = () => {
       </section>
       <section className="bg-black hero-bg border-t-4 section-border-gradient">
         <Features />
-        <TestmonialCards />
         <Computer isCompInMiddle={false} />
+        <TestmonialCards />
       </section>
       <section className="bg-[#252526] border-t-4 section-border-gradient w-full h-[50vh] pt-20">
         <Footer />

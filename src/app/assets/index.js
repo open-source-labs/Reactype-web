@@ -7,15 +7,17 @@ import footerSmallBackground from "./reactype-footer-small-bg.png";
 import orageBlueHeroBackground from "./orange-blue-black.jpg";
 import secondSectionBubble from "./moving-bubble.png";
 import bubbleHeroBackground from "./bubble-bg-xl.png";
-import whiteLogoNoText from "./white-reactype-logo-ver1.png";
+import whiteLogo from "./white-reactype-logo-2.png";
 import bubbleCube from "./bubble-cube.jpg";
 import squareChromeBackground from "./square-chrome-bg.png";
 import whiteLastBackground from "./white-background-footer.jpg";
 import computerRendering from "./reactype-in-comp.png";
-import computerRendering2 from "./comp-render-2.png"
-import RlogoBlue from "./R-logo-blue-large-3.png"
+import computerRendering2 from "./new-rt-comp-render.png";
+import RlogoBlue from "./R-logo-blue-large-3.png";
 import ReactypeAppIcon from "./reactype-white-logo-2.png";
-import blueWhiteBackgroundR from "./blue-R-white-bg.png"
+import blueWhiteBackgroundR from "./blue-R-white-bg.png";
+import SFRTLogo from "./SF_RT_LOGO_WHITE_NO_TEXT_2.png";
+import SFRTNoText from "./SF_LOGO_WHITE_NO_TEXT.png";
 
 export {
   reacTypeLogoTwo,
@@ -27,7 +29,7 @@ export {
   orageBlueHeroBackground,
   secondSectionBubble,
   bubbleHeroBackground,
-  whiteLogoNoText,
+  whiteLogo,
   bubbleCube,
   squareChromeBackground,
   whiteLastBackground,
@@ -35,5 +37,7 @@ export {
   computerRendering2,
   RlogoBlue,
   ReactypeAppIcon,
-  blueWhiteBackgroundR
+  blueWhiteBackgroundR,
+  SFRTLogo,
+  SFRTNoText,
 };

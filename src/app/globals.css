@@ -46,17 +46,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -2.6rem 0 0 0;
+  margin: -3.5rem 0 0 0;
   display: flex;
   flex-direction: flex-start;
-  width: 7.4rem;
+  width: 10.4rem;
 }
 
 .logo-image-small {
   margin: -3rem 0 0 -2rem;
   display: flex;
   flex-direction: flex-start;
-  width: 15rem;
+  width: 1rem;
 }
 
 .hash-span {
@@ -560,9 +560,8 @@ footer a:hover {
   text-align: center;
   line-height: 20px;
   font-size: 12px;
-  color: #000;
+  color: #ffffff;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .swiper-pagination,
@@ -571,7 +570,6 @@ footer a:hover {
 .swiper-pagination-horizontal {
   width: 1rem;
   color: #fff;
-  background: #4d4e4e;
 }
 
 .swiper-pagination-bullet {

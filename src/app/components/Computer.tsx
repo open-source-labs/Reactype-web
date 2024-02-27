@@ -5,7 +5,7 @@ import { computerRendering2 } from "../assets";
 import Image from "next/image";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { AddCircleSharp } from "@mui/icons-material";
+import { ArrowOutward } from "@mui/icons-material";
 
 interface Props {
   isCompInMiddle: boolean;
@@ -80,21 +80,27 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
                 },
               },
             }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{ scale: 0.9 }}
             initial="hidden"
             animate={mainControls}
             className="mt-56 bg-[#363538] w-[19rem] h-[4rem] flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
             style={{ backdropFilter: "blur(10px)" }}
           >
             <span className="text-xl flex items-center justify-center ml-[1rem]">
-              Dive into Reactype{" "}
+              Dive into ReacType{" "}
             </span>
-            <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>
-              <AddCircleSharp
-                sx={{
-                  color: "#0671e3",
-                  fontSize: "3rem",
-                }}
-              />
+            <motion.div>
+              <a href="https://app.reactype.dev/#/signup">
+                <ArrowOutward
+                  sx={{
+                    color: "#0671e3",
+                    fontSize: "3rem",
+                  }}
+                />
+              </a>
             </motion.div>
           </motion.div>
         </div>

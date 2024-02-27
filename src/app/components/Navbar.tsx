@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { styles } from "../style";
 import { Button } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { whiteLogoNoText } from "../assets";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactypeAppIcon, blueWhiteBackgroundR } from "../assets";
+import { SFRTNoText, SFRTLogo } from "../assets";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 
 interface NavigationItem {
@@ -34,12 +33,12 @@ const Navbar = () => {
           style={{ backdropFilter: "blur(10px)" }}
         >
           <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
-            <Link href="/" className="mt-[2rem]">
+            <Link href="/" className="mt-[3rem] mr-[-3.5rem]">
               <Image
                 priority
-                src={blueWhiteBackgroundR}
+                src={SFRTLogo}
                 alt="logo"
-                className={`h-[3.5rem] object-contain flex flex-start ${
+                className={`h-[4.5rem] object-contain flex flex-start ${
                   smallScreenSize ? "logo-image" : "logo-image-small"
                 }`}
               />
@@ -118,7 +117,7 @@ const Navbar = () => {
                   <li className="nav-item flex-start">
                     <a href="/" className="mt-[2rem]">
                       <Image
-                        src={whiteLogoNoText}
+                        src={SFRTNoText}
                         alt="logo"
                         className="h-[2rem] object-contain flex flex-start logo-image"
                       />
@@ -161,7 +160,7 @@ const Navbar = () => {
                 <li className="left nav-item">
                   <a href="/" className="nav-link nav-link-cb">
                     <Image
-                      src={blueWhiteBackgroundR}
+                      src={SFRTNoText}
                       alt="logo"
                       className=" mt-4"
                     />

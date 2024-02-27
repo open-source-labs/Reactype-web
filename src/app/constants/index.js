@@ -41,12 +41,12 @@ const ServiceData = [
   {
     header: "A Home For Your Code",
     content:
-      "Transform Reactype into your centralized hub for all coding projects. Seamlessly import and export your projects, ensuring effortless collaboration and the freedom to resume work whenever inspiration strikes.",
+      "Transform ReacType into your centralized hub for all coding projects. Seamlessly import and export your projects, ensuring effortless collaboration and the freedom to resume work whenever inspiration strikes.",
   },
   {
     header: "React, Gatsby, and Next",
     content:
-      "Enhance Reactype with Next.js's powerful features by integrating Next.js specific Link and Image components. Connect users directly to their created pages with efficient routing.",
+      "Enhance ReacType with Next.js's powerful features by integrating Next.js specific Link and Image components. Connect users directly to their created pages with efficient routing.",
   },
   {
     header: "Cloud Based",
@@ -81,14 +81,14 @@ const ServiceData = [
   {
     header: "Debug",
     content:
-      "View stack traces, visualize query runs over time, inspect app state, and drill into all dependencies. Version control changes in Reactype with Git and use PRs to merge updates.",
+      "View stack traces, visualize query runs over time, inspect app state, and drill into all dependencies. Version control changes in ReacType with Git and use PRs to merge updates.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "I thought it was impossible to make an app as beautiful as our product, but the Reactype team proved me wrong.",
+      "I thought it was impossible to make an app as beautiful as our product, but the ReacType team proved me wrong.",
     name: "Sara Lee",
     title: "CFO",
     company: "Acme Co",
@@ -97,14 +97,14 @@ const testimonials = [
   {
     quote:
       "I've never met a web developement team who truly cares about their clients' success.",
-    name: "Chris Brown",
+    name: "Chris Homes",
     title: "COO",
     company: "DEF Corp",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     quote:
-      "After the Reactype team optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After the ReacType team optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     title: "CTO",
     company: "456 Enterprises",
@@ -623,24 +623,24 @@ const people = [
     firstName: "Cyrus",
     lastName: "Burns",
     github: "https://github.com/cyburns",
-    linkedin: "https://www.linkedin.com/in/cyrus-burns/",
+    linkedin: "https://www.linkedin.com/in/cyburns/",
   },
   {
     firstName: "Jon",
     lastName: "Wage",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/johnwage",
+    linkedin: "https://www.linkedin.com/in/johnwage/",
   },
   {
     firstName: "Brian",
     lastName: "Yan",
-    github: "",
-    linkedin: "",
+    github: "https://github.com/BrianYanGitHub",
+    linkedin: "https://www.linkedin.com/in/brianyan7",
   },
   {
-    firstName: "Eliza",
+    firstName: "Yameng",
     lastName: "Zhang",
-    github: "",
+    github: "https://github.com/Eliza612",
     linkedin: "https://www.linkedin.com/in/yameng-zhang612/",
   },
 ];

@@ -148,7 +148,7 @@ const Features = () => {
             <hr className="w-full mb-10" />
             <p className=" text-xl leading-7 text-[#6e6e73]">
               Help your team spend more time innovating—and finally clear the
-              backlog. Reactype is your application layer for building secure
+              backlog. ReacType is your application layer for building secure
               and standardized business software faster.
             </p>
           </div>

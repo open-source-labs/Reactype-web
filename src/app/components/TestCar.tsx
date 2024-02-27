@@ -19,7 +19,7 @@ import { styles } from "../style";
 import { Button } from "@material-tailwind/react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Computer  from "../components/Computer";
+import Computer from "../components/Computer";
 
 const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -28,16 +28,16 @@ const SwiperNavButtons = () => {
     <div className="text-center mt-14">
       <div className="flex justify-center">
         <Button
-          className=" rounded-full w-14 h-14 flex items-center justify-center m-3"
+          className=" rounded-full w-14 h-14 flex items-center justify-center m-3 z-30"
           onClick={() => swiper.slidePrev()}
         >
-          <ArrowBackIos className="text-white text-[1.8rem]" />
+          <ArrowBackIos className="text-white text-[1.8rem] z-30" />
         </Button>
         <Button
-          className=" rounded-full w-14 h-14 flex items-center justify-center m-3"
+          className=" rounded-full w-14 h-14 flex items-center justify-center m-3 z-30"
           onClick={() => swiper.slideNext()}
         >
-          <ArrowForwardIos className="text-white text-[1.8rem]" />
+          <ArrowForwardIos className="text-white text-[1.8rem] z-30" />
         </Button>
       </div>
     </div>
@@ -133,7 +133,7 @@ const TestCar = () => {
 
       <div
         ref={cardsSwiperScrollRef}
-        className="flex items-center justify-center flex-col h-[600px] bg-black"
+        className="flex items-center  justify-center flex-col h-[600px] bg-black [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
         <motion.div
           viewport={{ root: cardsSwiperScrollRef }}
@@ -163,12 +163,13 @@ const TestCar = () => {
         >
           <h1>
             <Swiper
-              modules={[Pagination]}
-              spaceBetween={30}
               slidesPerView="auto"
+              spaceBetween={30}
+              centeredSlides={true}
+              modules={[Pagination]}
             >
               {ServiceData.map((data, index) => (
-                <SwiperSlide key={index} className="res-slide">
+                <SwiperSlide key={index} className="res-slide ">
                   <ContentCards
                     index={index}
                     header={data.header}

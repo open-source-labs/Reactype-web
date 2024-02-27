@@ -6,7 +6,7 @@ import { styles } from "../style";
 import { bubbleHeroBackground } from "../assets";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { AddCircleSharp } from "@mui/icons-material";
+import { ArrowOutward } from "@mui/icons-material";
 import GoogleGeminiEffectDemo from "./MatrixBackground";
 
 const Hero = () => {
@@ -33,11 +33,6 @@ const Hero = () => {
     <section
       ref={headerScrollRef}
       className="relative w-full h-screen mx-auto hero-bg bg-black"
-      // style={{
-      //   backgroundImage: `url(${bubbleHeroBackground.src})`,
-      //   backgroundSize: "cover", // or "contain"
-      //   backgroundPosition: "-1vh",
-      // }}
     >
       <div className="h-full w-full">
         <motion.div
@@ -80,7 +75,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-row" style={{ zIndex: 2 }}>
             <Button
-              href="http://localhost:8080/#/signup"
+              href="https://app.reactype.dev/#/signup"
               className="blue-button shadow-2xl"
               variant="contained"
               sx={{
@@ -143,16 +138,21 @@ const Hero = () => {
               },
             },
           }}
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.9 }}
           initial="hidden"
           animate={mainControls}
           className="mt-56 bg-[#363538] w-[19rem] h-[4rem] flex items-center justify-center gap-2 rounded-[5rem] bg-opacity-80"
           style={{ backdropFilter: "blur(10px)" }}
         >
           <span className="text-xl flex items-center justify-center ml-[1rem]">
-            Explore Reactype{" "}
+            Explore ReacType{" "}
           </span>
           <motion.div whileHover={{ scale: 1.2, rotate: 180 }}>
-            <AddCircleSharp
+            <ArrowOutward
               sx={{
                 color: "#0671e3",
                 fontSize: "3rem",

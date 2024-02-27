@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Reactype",
+  title: "ReacType",
   description: "A visual prototyping tool for React developers",
 };
 
