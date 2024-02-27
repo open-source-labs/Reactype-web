@@ -60,10 +60,10 @@ const Team = () => {
                       {person.lastName[0]}
                     </Avatar>
                   </div>
-                  <h5 className="mb-1 text-3xl font-medium text-gray-900 dark:text-white">
+                  <h5 className="mb-1 text-3xl font-medium text-white">
                     {person.firstName}
                   </h5>
-                  <h5 className="mb-1 text-3xl font-medium text-gray-900 dark:text-white">
+                  <h5 className="mb-1 text-3xl font-medium text-white">
                     {person.lastName}
                   </h5>
                   <span className="text-sm text-[#86868b] mt-2">

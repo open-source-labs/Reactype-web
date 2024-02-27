@@ -1,15 +1,20 @@
 import Content from "./components/TestCar";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Computer from "./components/Computer";
-import GoogleGeminiEffectDemo from "./components/MatrixBackground";
 import TestmonialCards from "./components/TestimonialCards";
+import Hero from "./components/Hero";
+import Computer from "./components/Computer";
+import StarCards from "./components/StarCards"
 
 const Home = () => {
   return (
     <div className="relative z-0">
-      <div className="bg-no-repeat bg-center section-border-gradient">
-        <GoogleGeminiEffectDemo />
+      <div className="bg-no-repeat bg-black bg-center section-border-gradient">
+        <Hero />
+        <div className="mt-10">
+          <Computer isCompInMiddle={false} />
+          <StarCards/>
+        </div>
       </div>
       <section className="bg-black border-t-4 section-border-gradient">
         <Content />
