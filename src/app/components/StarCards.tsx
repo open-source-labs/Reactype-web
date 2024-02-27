@@ -6,15 +6,19 @@ import {
   GlowingStarsTitle,
 } from "./ui/glowing-card";
 
-const StarCards = () => {
+interface Props {
+  key: number;
+  header: string;
+  content: string;
+}
+
+const StarCards: React.FC<Props> = ({ header, content }) => {
   return (
-    <div className="flex py-20 items-center justify-center antialiased">
+    <div className="flex py-20 items-center justify-center antialiased m-10">
       <GlowingStarsBackgroundCard>
-        <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>
+        <GlowingStarsTitle>{header}</GlowingStarsTitle>
         <div className="flex justify-between items-end">
-          <GlowingStarsDescription>
-            The power of full-stack to the frontend. Read the release notes.
-          </GlowingStarsDescription>
+          <GlowingStarsDescription>{content}</GlowingStarsDescription>
           <div className="h-8 w-8 rounded-full bg-[hsla(0,0%,100%,.1)] flex items-center justify-center">
             <Icon />
           </div>
@@ -22,7 +26,7 @@ const StarCards = () => {
       </GlowingStarsBackgroundCard>
     </div>
   );
-}
+};
 
 const Icon = () => {
   return (

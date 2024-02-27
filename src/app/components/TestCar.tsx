@@ -224,10 +224,13 @@ const TestCar = () => {
               </h2>
             </div>
             <div className="mr-auto">
-              <p className="text-[#2997ff] text-[19px] hover:underline">
+              <a
+                href="https://app.reactype.dev/#/signup"
+                className="text-[#2997ff] text-[19px] hover:underline"
+              >
                 Try Here{" "}
                 <NavigateNext sx={{ color: "#2997ff", fontSize: "25px" }} />
-              </p>
+              </a>
             </div>
           </div>
         </motion.div>

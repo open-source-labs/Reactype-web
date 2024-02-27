@@ -2,31 +2,30 @@ import Image from "next/image";
 import React from "react";
 import { styles } from "../style";
 import { Button } from "@mui/material";
-import { Spotlight } from "./ui/Spotlight";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-96 pt-56 mx-auto bg-black">
-      <Spotlight className="left-80 md:left-60 md:-top-20" fill="white" />
       <div className="">
         <div
-          className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 mx-auto flex flex-col items-center gap-5`}
+          className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 mx-auto flex flex-col items-center gap-5z z-30`}
         >
           <h1
-            className={`${styles.heroHeadText} mt-32 text-img text-center text-white`}
+            className={`${styles.heroHeadText} mt-32 lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl`}
           >
             A Visual Prototyping Tool For React Developers
           </h1>
           <h3
-            className={`${styles.sectionSubText} text-center w-[53rem] text-[#6e6e73] mt-[-3rem] text-lg leading-8 my-10`}
+            className={`${styles.sectionSubText} text-center text-xl leading-8 text-[#86868b] lg:w-[44%] sm:w-full lg:-mt:7 md:-mt-7 sm:mt-10 xs:mt-10`}
           >
             Built-in comprehensive type checking with TypeScript and flexible
             exporting in Classic React, Next.js, or Gatsby.js
           </h3>
+
           <div className="flex flex-row mt-5">
             <Button
               href="https://app.reactype.dev/#/signup"
-              className="blue-button shadow-2xl z-30 "
+              className="blue-button animate-shimmer transition-colors"
               variant="contained"
               sx={{
                 margin: "0.8rem",
@@ -46,7 +45,7 @@ const Hero = () => {
             <Button
               href="/team"
               variant="outlined"
-              className="shadow-2xl z-30"
+              className="shadow-2xl z-30 nimate-shimmer transition-colors"
               sx={{
                 margin: "0.8rem",
                 color: "white",
