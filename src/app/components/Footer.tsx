@@ -1,138 +1,152 @@
-'use client';
+"use client";
 
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Fragment, useState } from 'react';
+import React from "react";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
-import { Dialog } from '@headlessui/react';
-import Image from 'next/image';
-import github from 'public/github.svg';
-import linkedin from 'public/linkedin.svg';
-import logo from 'public/reactype.png';
+const currentYear = new Date().getFullYear();
 
-const navigation = [
-	{ name: 'Home', href: '/', current: true },
-	{ name: 'Tutorial', href: '/tutorial', current: false },
-	{ name: 'Download', href: '/#download', current: false },
-	{ name: 'Meet the team', href: '/#meettheteam', current: false },
-];
+const Footer = () => {
+  return (
+    <footer className="bg-[#252526]">
+      <div className="mx-auto w-full max-w-screen-xl mb-[8rem]">
+        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              ReacType
+            </h2>
+            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <li className="mb-4">
+                <a href="#" className=" hover:underline">
+                  About
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Careers
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Brand Center
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              Help center
+            </h2>
+            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Discord Server
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Twitter
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Facebook
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              Legal
+            </h2>
+            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  MIT License
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Privacy Policy
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Licensing
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Terms &amp; Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              Download
+            </h2>
+            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  iOS
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Android
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  Windows
+                </a>
+              </li>
+              <li className="mb-4">
+                <a href="#" className="hover:underline">
+                  MacOS
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-export default function Footer() {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+        <hr className="mb-10" />
+        <div className="px-4 py-6  md:flex md:items-center md:justify-between">
+          <span className="text-sm text-white sm:text-center p-5">
+            ©{currentYear}{" "}
+            <a href="https://app.reactype.dev/#/signup">Reactype™</a>. All
+            Rights Reserved.
+          </span>
+          <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+            <a
+              href="https://github.com/open-source-labs/ReacType"
+              className="text-white hover:text-gray-400"
+            >
+              <GitHub />
+              <span className="sr-only">GitHub page</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/reactype"
+              className="text-white hover:text-gray-400"
+            >
+              <LinkedIn />
+              <span className="sr-only">LinkedIn account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-	return (
-		<div>
-			<nav
-				className="flex items-center justify-between p-6 lg:px-8"
-				aria-label="Global"
-			>
-				<div className="flex lg:flex-1">
-					<a href="#" className="-m-1.5 p-1.5">
-						<span className="sr-only">ReacType</span>
-						<Image
-							className="h-8 w-auto"
-							width={200}
-							height={200}
-							src={logo}
-							alt="logo"
-						/>
-					</a>
-				</div>
-				<div className="flex lg:hidden">
-					<button
-						type="button"
-						className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-						onClick={() => setMobileMenuOpen(true)}
-					>
-						<span className="sr-only">Open menu</span>
-						<Bars3Icon className="h-6 w-6" aria-hidden="true" />
-					</button>
-				</div>
-				<div className="hidden lg:flex lg:gap-x-12">
-					{navigation.map((item) => (
-						<a
-							key={item.name}
-							href={item.href}
-							className="text-sm font-semibold leading-6 text-gray-400"
-						>
-							{item.name}
-						</a>
-					))}
-				</div>
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<div className="flex gap-x-5 px-4 items-center">
-						<a href="https://github.com/open-source-labs/ReacType">
-							<Image
-								className="h-8 w-auto"
-								width={200}
-								height={200}
-								src={github}
-								alt="logo"
-							/>
-						</a>
-						<a href="https://www.linkedin.com/company/reactype">
-							<Image
-								className="h-8 w-auto"
-								width={200}
-								height={200}
-								src={linkedin}
-								alt="logo"
-							/>
-						</a>
-					</div>
-					<a
-						href="https://app.reactype.dev/#/login"
-						className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#006f73] font-medium"
-					>
-						Get Started
-					</a>
-				</div>
-			</nav>
-			<Dialog
-				as="div"
-				className="lg:hidden"
-				open={mobileMenuOpen}
-				onClose={setMobileMenuOpen}
-			>
-				<div className="fixed inset-0 z-50" />
-				<Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-					<div className="flex items-center justify-between">
-						<a href="#" className="-m-1.5 p-1.5">
-							<span className="sr-only">ReacType</span>
-						</a>
-						<button
-							type="button"
-							className="-m-2.5 rounded-md p-2.5 text-gray-700"
-							onClick={() => setMobileMenuOpen(false)}
-						>
-							<span className="sr-only">Close menu</span>
-							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
-						</button>
-					</div>
-					<div className="mt-6 flow-root">
-						<div className="-my-6 divide-y divide-gray-500/10">
-							<div className="space-y-2 py-6">
-								{navigation.map((item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-									>
-										{item.name}
-									</a>
-								))}
-							</div>
-							<div className="py-6">
-								<a
-									href="https://app.reactype.dev/#/login"
-									className="flex justify-center items-center relative overflow-hidden px-5 py-2.5 rounded-md bg-[#006f73] font-medium"
-								>
-									Sign up
-								</a>
-							</div>
-						</div>
-					</div>
-				</Dialog.Panel>
-			</Dialog>
-		</div>
-	);
-}
+export default Footer;
