@@ -19,7 +19,6 @@ import { styles } from "../style";
 import { Button } from "@material-tailwind/react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Computer from "../components/Computer";
 
 const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -136,11 +135,9 @@ const TestCar = () => {
         ) : null}
       </motion.div>
 
-      {/* <Computer isCompInMiddle={true}/> */}
-
       <div
         ref={cardsSwiperScrollRef}
-        className="flex items-center  justify-center flex-col h-[600px] bg-black [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+        className="flex items-center  justify-center flex-col h-[700px] bg-black [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
         <motion.div
           viewport={{ root: cardsSwiperScrollRef }}
@@ -168,7 +165,7 @@ const TestCar = () => {
           animate={secondaryControls}
           className="swiper-section-container"
         >
-          <h1>
+          <div>
             <Swiper
               slidesPerView="auto"
               spaceBetween={30}
@@ -176,7 +173,7 @@ const TestCar = () => {
               modules={[Pagination]}
             >
               {ServiceData.map((data, index) => (
-                <SwiperSlide key={index} className="res-slide ">
+                <SwiperSlide key={index} className="res-slide">
                   <ContentCards
                     index={index}
                     header={data.header}
@@ -187,7 +184,7 @@ const TestCar = () => {
               ))}
               <SwiperNavButtons />
             </Swiper>
-          </h1>
+          </div>
         </motion.div>
       </div>
 

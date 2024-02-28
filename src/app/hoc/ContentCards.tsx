@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { NavigateNext } from "@mui/icons-material";
 import { iconArray } from "../constants";
+import { useMediaQuery } from "@mui/material";
 
 interface Features {
   title: string;
@@ -24,8 +25,15 @@ interface Props {
 }
 
 const ContentCards: React.FC<Props> = ({ index, header, content }) => {
+  const smallScreenSize = useMediaQuery("(min-width:640px)");
+  const variableCardWidthAndHeight = smallScreenSize
+    ? "w-96 h-[26rem]"
+    : "w-72 h-[30rem]";
+
   return (
-    <Card className="mt-6 w-96 h-[26rem] bg-[#252526] p-8">
+    <Card
+      className={`${variableCardWidthAndHeight} mx-auto  mt-6 bg-[#252526] p-8`}
+    >
       <CardBody>
         {iconArray[index]}
         <Typography variant="h5" color="blue-gray" className="my-5">
@@ -35,7 +43,7 @@ const ContentCards: React.FC<Props> = ({ index, header, content }) => {
       </CardBody>
       <CardFooter className="mt-5">
         <a href="#" className="inline-block">
-          <Typography className="flex items-center  text-[#86868b] hover:underline ">
+          <Typography className="flex items-end text-[#86868b] hover:underline ">
             Learn More
             <NavigateNext />
           </Typography>

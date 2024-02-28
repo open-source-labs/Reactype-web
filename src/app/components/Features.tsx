@@ -74,11 +74,13 @@ const Features = () => {
           animate={mainControls}
           className="text-center"
         >
-          <h2 className={`${styles.heroHeadText} white-text-grad text-center `}>
+          <h2
+            className={`${styles.sectionHeadText} lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0 text-center lg:mt-48 mt-16`}
+          >
             Make Every Step User-Centric
           </h2>
           <p
-            className={`${styles.sectionSubText} text-xl leading-7 text-[#6e6e73]`}
+            className={`${styles.sectionSubText} mt-6 text-xl leading-8 text-[#86868b]  text-center`}
           >
             ReacType is a prototyping tool that allows users to visualize their
             application architecture dynamically, employing a drag-and-drop

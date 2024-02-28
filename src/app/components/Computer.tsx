@@ -59,7 +59,7 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
       {isCompInMiddle ? null : (
         <div
           ref={headerScrollRef}
-          className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-10"
+          className="fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50 mb-10"
         >
           <motion.div
             variants={{

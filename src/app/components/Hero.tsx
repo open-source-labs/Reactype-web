@@ -11,12 +11,12 @@ const Hero = () => {
           className={`${styles.paddingX} absolute inset-0 top-[42%] transform -translate-y-1/2 mx-auto flex flex-col items-center gap-5z z-30`}
         >
           <h1
-            className={`${styles.heroHeadText} mt-32 lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl`}
+            className={`${styles.sectionHeadText} lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0 text-center lg:mt-48 mt-16`}
           >
             A Visual Prototyping Tool For React Developers
           </h1>
           <h3
-            className={`${styles.sectionSubText} text-center text-xl leading-8 text-[#86868b] lg:w-[44%] sm:w-full lg:-mt:7 md:-mt-7 sm:mt-10 xs:mt-10`}
+            className={`${styles.sectionSubText} mt-6 text-xl leading-8 text-[#86868b] lg:w-[44%] sm:w-full text-center`}
           >
             Built-in comprehensive type checking with TypeScript and flexible
             exporting in Classic React, Next.js, or Gatsby.js

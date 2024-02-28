@@ -554,38 +554,13 @@ footer a:hover {
   color: rgb(115, 115, 115);
 }
 
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #ffffff;
-  opacity: 1;
-}
-
-.swiper-pagination,
-.swiper-pagination-clickable,
-.swiper-pagination-bullets,
-.swiper-pagination-horizontal {
-  width: 1rem;
-  color: #fff;
-}
-
-.swiper-pagination-bullet {
-  width: 50rem;
-  height: 5rem;
-  color: #00cea8;
-  background-color: #00cea8;
-}
-
 .swiper-section-container {
   width: 100%;
   margin: auto;
 }
 
 .swiper .res-slide {
-  min-width: 300px;
+  min-width: 00px;
   max-width: 400px;
   min-height: 350px;
   border-radius: 20px;

@@ -7,7 +7,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
 import { SFRTNoText, SFRTLogo } from "../assets";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import {
+  GitHub,
+  LinkedIn,
+  Language,
+  Groups,
+  Assignment,
+} from "@mui/icons-material";
 
 interface NavigationItem {
   name: string;
@@ -118,28 +124,68 @@ const Navbar = () => {
                 )}
                 <li className="nav-item">
                   <a href="/solutions" className="nav-link">
-                    Solutions
+                    <Language
+                      sx={{
+                        fontSize: "2.5rem",
+                        color: "white",
+                        "&:hover": { color: "#86868b" },
+                      }}
+                    />
+                    <span className="ml-6">Solutions</span>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/solutions" className="nav-link">
+                    <Assignment
+                      sx={{
+                        fontSize: "2.5rem",
+                        color: "white",
+                        "&:hover": { color: "#86868b" },
+                      }}
+                    />
+                    <span className="ml-6">About</span>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="/team" className="nav-link">
-                    Our Team
+                    <Groups
+                      sx={{
+                        fontSize: "2.5rem",
+                        color: "white",
+                        "&:hover": { color: "#86868b" },
+                      }}
+                    />
+                    <span className="ml-6">Our Team</span>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a
                     className="nav-link ml-[1.5rem]"
-                    href="https://app.reactype.dev/#/login"
+                    href="https://github.com/open-source-labs/ReacType"
                   >
-                    Log in
+                    <GitHub
+                      sx={{
+                        fontSize: "2.5rem",
+                        color: "white",
+                        "&:hover": { color: "#86868b" },
+                      }}
+                    />
+                    <span className="ml-6">GitHub</span>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a
                     className="nav-link ml-[1.5rem]"
-                    href="https://app.reactype.dev/#/signup"
+                    href="https://www.linkedin.com/company/reactype"
                   >
-                    Sign up
+                    <LinkedIn
+                      sx={{
+                        fontSize: "2.5rem",
+                        color: "white",
+                        "&:hover": { color: "#86868b" },
+                      }}
+                    />
+                    <span className="ml-6">LinkedIn</span>
                   </a>
                 </li>
               </ul>
