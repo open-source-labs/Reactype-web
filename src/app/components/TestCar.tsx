@@ -34,7 +34,10 @@ const SwiperNavButtons = () => {
         </Button>
         <Button
           className=" rounded-full w-14 h-14 flex items-center justify-center m-3 z-30"
-          onClick={() => swiper.slideNext()}
+          onClick={() => {
+            console.log(swiper);
+            swiper.slideNext();
+          }}
         >
           <ArrowForwardIos className="text-white text-[1.8rem] z-30" />
         </Button>
@@ -45,6 +48,7 @@ const SwiperNavButtons = () => {
 
 const TestCar = () => {
   const smallScreenSize = useMediaQuery("(min-width:1260px)");
+  const swiperSlidesPerView = smallScreenSize ? 2 : "auto";
 
   const headerScrollRef = useRef(null);
   const cardsSwiperScrollRef = useRef(null);
@@ -167,7 +171,7 @@ const TestCar = () => {
         >
           <div>
             <Swiper
-              slidesPerView="auto"
+              slidesPerView={swiperSlidesPerView}
               spaceBetween={30}
               centeredSlides={true}
               modules={[Pagination]}

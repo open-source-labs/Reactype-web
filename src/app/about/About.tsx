@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <section className="py-12 w-full sm:py-16 lg:py-20 bg-black h-full">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 h-screen mt-36">
         <motion.div
           ref={headerScrollRef}
           viewport={{ root: headerScrollRef }}
@@ -52,13 +52,14 @@ const About = () => {
           }}
           initial="hidden"
           animate={mainControls}
-          className="text-center"
         >
-          <h2 className={`${styles.heroHeadText} white-text-grad text-center `}>
+          <h2
+            className={`${styles.sectionHeadText} text-center lg:text-[64px] md:text-[60px] sm:text-[50px] xs:text-[40px] tracking-tight text-[#f5f5f7] sm:text-6xl ml-0`}
+          >
             Learn about ReacType
           </h2>
           <p
-            className={`${styles.sectionSubText} text-xl leading-7 text-[#6e6e73] mb-[50%]`}
+            className={`${styles.sectionSubText} mt-6 text-xl leading-8 text-[#86868b]  sm:w-full`}
           >
             ReacType is a rapid prototyping tool that allows users visualize
             their application architecture dynamically, employing a
