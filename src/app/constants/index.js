@@ -8,6 +8,9 @@ import {
   Repeat,
   LaptopMac,
   PestControl,
+  Pentagon,
+  SpaceDashboard,
+  Extension,
 } from "@mui/icons-material";
 
 const navLinks = [
@@ -659,6 +662,45 @@ const features = [
   },
 ];
 
+const technologyCards = [
+  {
+    title: "Frontend",
+    tech: [
+      "React: for building user interfaces based on components",
+      "TypeScript: adds static typing with optional type annotations to JavaScript",
+      "Redux: managing and centralizing application state",
+      "MUI: a comprehensive suite of UI tools to help ship new features faster",
+      "Tailwind: A utility-first CSS framework packed with classes to build any design, directly in markup",
+    ],
+  },
+  {
+    title: "Backend",
+    tech: [
+      "Node.js:  runtime environment that can run on Windows, Linux, Unix, macOS, and more",
+      "Express:  minimal Node.js web application framework that provides a set of features for applications",
+      "MongoDB: create scalable databases",
+      "Postgres: relational database management system",
+      "Socket: an event-driven library for real-time web applications",
+    ],
+  },
+  {
+    title: "DevOps",
+    tech: [
+      "AWS: on-demand cloud computing platforms and APIs",
+      "Docker: OS-level virtualization to deliver software in containers",
+      "CI/CD: continuous integration and continuous delivery",
+      "Git: distributed version control system to tracks changes",
+      "Kubernetes:  container orchestration system for automating software deployment",
+    ],
+  },
+];
+
+const technologyIconArray = [
+  <Pentagon key="0" sx={{ fontSize: "4rem", color: "white" }} />,
+  <SpaceDashboard key="1" sx={{ fontSize: "4rem", color: "white" }} />,
+  <Extension key="2" sx={{ fontSize: "4rem", color: "white" }} />,
+];
+
 export {
   navLinks,
   iconArray,
@@ -668,4 +710,6 @@ export {
   people,
   ServiceData,
   features,
+  technologyCards,
+  technologyIconArray,
 };

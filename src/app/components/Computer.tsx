@@ -20,7 +20,6 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
     if (isHeaderInView) {
       mainControls.start("visible");
     }
-    
   }, [isHeaderInView, mainControls, headerScrollRef]);
 
   return (
@@ -77,6 +76,7 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
                 transition: {
                   type: "spring",
                   duration: 2.25,
+                  delay: 0.75,
                 },
               },
             }}

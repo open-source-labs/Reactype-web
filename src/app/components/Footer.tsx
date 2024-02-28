@@ -121,13 +121,13 @@ const Footer = () => {
         </div>
 
         <hr className="mb-10" />
-        <div className="px-4 py-6  md:flex md:items-center md:justify-between">
+        <div className="px-4 py-6 md:flex items-center justify-center md:justify-between">
           <span className="text-sm text-white sm:text-center p-5">
             ©{currentYear}{" "}
             <a href="https://app.reactype.dev/#/signup">Reactype™</a>. All
             Rights Reserved.
           </span>
-          <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <div className="flex mt-4 justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a
               href="https://github.com/open-source-labs/ReacType"
               className="text-white hover:text-gray-400"

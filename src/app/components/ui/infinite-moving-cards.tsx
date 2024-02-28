@@ -1,7 +1,5 @@
 "use client";
-// Inside the TestimonialCards component
 
-// Import the CSS utility function 'text-lg' for larger text size
 import { cn } from "@/app/utils/cn";
 import React, { useEffect, useState } from "react";
 
@@ -64,13 +62,7 @@ export const InfiniteMovingCards = ({
 
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
+      containerRef.current.style.setProperty("--animation-duration", "80s");
     }
   };
 
@@ -90,7 +82,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item, index) => (
           <li
             className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0 bg-[#252526] px-8 py-6 md:w-[450px] font-lg"
             key={item.name}
