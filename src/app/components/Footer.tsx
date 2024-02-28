@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl mb-[8rem]">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase">
               ReacType
             </h2>
             <ul className="text-gray-500 font-medium">
@@ -38,7 +38,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Help center
             </h2>
             <ul className="text-gray-500 font-medium">
@@ -65,7 +65,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Legal
             </h2>
             <ul className="text-gray-500 font-medium">
@@ -92,7 +92,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Download
             </h2>
             <ul className="text-gray-500 font-medium">
