@@ -57,7 +57,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.25,
-                delay: 0.5,
               },
             },
             visible: {
@@ -66,7 +65,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.25,
-                delay: 0.2,
               },
             },
           }}
@@ -98,7 +96,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 2.25,
-                delay: 0.5,
               },
             },
             visible: {
@@ -107,7 +104,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.5,
-                delay: 0.5,
               },
             },
           }}
@@ -171,7 +167,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
             visible: {
@@ -180,7 +175,6 @@ const Features = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
           }}

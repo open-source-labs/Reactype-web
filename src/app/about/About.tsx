@@ -37,7 +37,6 @@ const About = () => {
               transition: {
                 type: "spring",
                 duration: 1.25,
-                delay: 0.5,
               },
             },
             visible: {
@@ -46,7 +45,6 @@ const About = () => {
               transition: {
                 type: "spring",
                 duration: 1.25,
-                delay: 0.2,
               },
             },
           }}

@@ -66,7 +66,6 @@ const Solutions = () => {
             transition: {
               type: "spring",
               duration: 1.25,
-              delay: 0.5,
             },
           },
           visible: {
@@ -75,7 +74,6 @@ const Solutions = () => {
             transition: {
               type: "spring",
               duration: 1.25,
-              delay: 0.2,
             },
           },
         }}
@@ -109,7 +107,6 @@ const Solutions = () => {
               transition: {
                 type: "spring",
                 duration: 4.75,
-                delay: 0.5,
               },
             },
             visible: {
@@ -118,7 +115,6 @@ const Solutions = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
           }}
@@ -152,7 +148,6 @@ const Solutions = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
             visible: {
@@ -161,7 +156,6 @@ const Solutions = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.2,
               },
             },
           }}

@@ -77,7 +77,6 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
                 transition: {
                   type: "spring",
                   duration: 2.25,
-                  delay: 1,
                 },
               },
             }}
