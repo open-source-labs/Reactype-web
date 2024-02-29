@@ -11,10 +11,10 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl mb-[8rem]">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase">
               ReacType
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 font-medium">
               <li className="mb-4">
                 <a href="#" className=" hover:underline">
                   About
@@ -38,10 +38,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Help center
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Discord Server
@@ -65,10 +65,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Legal
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   MIT License
@@ -92,10 +92,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
               Download
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   iOS
@@ -121,13 +121,13 @@ const Footer = () => {
         </div>
 
         <hr className="mb-10" />
-        <div className="px-4 py-6  md:flex md:items-center md:justify-between">
+        <div className="px-4 py-6 md:flex items-center justify-center md:justify-between">
           <span className="text-sm text-white sm:text-center p-5">
             ©{currentYear}{" "}
             <a href="https://app.reactype.dev/#/signup">Reactype™</a>. All
             Rights Reserved.
           </span>
-          <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <div className="flex mt-4 justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a
               href="https://github.com/open-source-labs/ReacType"
               className="text-white hover:text-gray-400"

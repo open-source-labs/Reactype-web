@@ -19,7 +19,6 @@ import { styles } from "../style";
 import { Button } from "@material-tailwind/react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
-import Computer from "../components/Computer";
 
 const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -35,7 +34,10 @@ const SwiperNavButtons = () => {
         </Button>
         <Button
           className=" rounded-full w-14 h-14 flex items-center justify-center m-3 z-30"
-          onClick={() => swiper.slideNext()}
+          onClick={() => {
+            console.log(swiper);
+            swiper.slideNext();
+          }}
         >
           <ArrowForwardIos className="text-white text-[1.8rem] z-30" />
         </Button>
@@ -46,6 +48,7 @@ const SwiperNavButtons = () => {
 
 const TestCar = () => {
   const smallScreenSize = useMediaQuery("(min-width:1260px)");
+  const swiperSlidesPerView = smallScreenSize ? 2 : "auto";
 
   const headerScrollRef = useRef(null);
   const cardsSwiperScrollRef = useRef(null);
@@ -94,7 +97,6 @@ const TestCar = () => {
             transition: {
               type: "spring",
               duration: 1.25,
-              delay: 0.5,
             },
           },
           visible: {
@@ -103,7 +105,6 @@ const TestCar = () => {
             transition: {
               type: "spring",
               duration: 1.25,
-              delay: 0.2,
             },
           },
         }}
@@ -136,11 +137,9 @@ const TestCar = () => {
         ) : null}
       </motion.div>
 
-      {/* <Computer isCompInMiddle={true}/> */}
-
       <div
         ref={cardsSwiperScrollRef}
-        className="flex items-center  justify-center flex-col h-[600px] bg-black [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+        className="flex items-center  justify-center flex-col h-[700px] bg-black [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
       >
         <motion.div
           viewport={{ root: cardsSwiperScrollRef }}
@@ -151,7 +150,6 @@ const TestCar = () => {
               transition: {
                 type: "spring",
                 duration: 4.75,
-                delay: 0.5,
               },
             },
             visible: {
@@ -160,7 +158,6 @@ const TestCar = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
           }}
@@ -168,15 +165,15 @@ const TestCar = () => {
           animate={secondaryControls}
           className="swiper-section-container"
         >
-          <h1>
+          <div>
             <Swiper
-              slidesPerView="auto"
+              slidesPerView={swiperSlidesPerView}
               spaceBetween={30}
               centeredSlides={true}
               modules={[Pagination]}
             >
               {ServiceData.map((data, index) => (
-                <SwiperSlide key={index} className="res-slide ">
+                <SwiperSlide key={index} className="res-slide">
                   <ContentCards
                     index={index}
                     header={data.header}
@@ -187,7 +184,7 @@ const TestCar = () => {
               ))}
               <SwiperNavButtons />
             </Swiper>
-          </h1>
+          </div>
         </motion.div>
       </div>
 
@@ -201,7 +198,6 @@ const TestCar = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.5,
               },
             },
             visible: {
@@ -210,7 +206,6 @@ const TestCar = () => {
               transition: {
                 type: "spring",
                 duration: 1.75,
-                delay: 0.2,
               },
             },
           }}
@@ -224,10 +219,13 @@ const TestCar = () => {
               </h2>
             </div>
             <div className="mr-auto">
-              <p className="text-[#2997ff] text-[19px] hover:underline">
+              <a
+                href="https://app.reactype.dev/#/signup"
+                className="text-[#2997ff] text-[19px] hover:underline"
+              >
                 Try Here{" "}
                 <NavigateNext sx={{ color: "#2997ff", fontSize: "25px" }} />
-              </p>
+              </a>
             </div>
           </div>
         </motion.div>

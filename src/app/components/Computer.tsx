@@ -17,9 +17,9 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    isHeaderInView
-      ? mainControls.start("visible")
-      : mainControls.start("hidden");
+    if (isHeaderInView) {
+      mainControls.start("visible");
+    }
   }, [isHeaderInView, mainControls, headerScrollRef]);
 
   return (
@@ -58,7 +58,7 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
       {isCompInMiddle ? null : (
         <div
           ref={headerScrollRef}
-          className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 mb-10"
+          className="fixed bottom-1 left-1/2 transform -translate-x-1/2 z-50 mb-10"
         >
           <motion.div
             variants={{
@@ -76,7 +76,7 @@ const Feedbacks: React.FC<Props> = ({ isCompInMiddle }) => {
                 transition: {
                   type: "spring",
                   duration: 2.25,
-                  delay: 1,
+                  delay: 0.75,
                 },
               },
             }}
