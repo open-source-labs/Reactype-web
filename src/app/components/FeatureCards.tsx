@@ -45,7 +45,7 @@ const FeatureCards: React.FC<Props> = ({ index, title, tech }) => {
       <CardBody className="p-0">
         <ul className="flex flex-col gap-4">
           {tech.map((item, index) => (
-            <li className="flex items-center gap-4">
+            <li key={index} className="flex items-center gap-4">
               <span className="rounded-full border border-white/20 bg-white/20 p-1">
                 <Check className="text-[#01da58]" />
               </span>

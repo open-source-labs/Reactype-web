@@ -628,7 +628,7 @@ const people = [
     linkedin: "https://www.linkedin.com/in/cyburns/",
   },
   {
-    firstName: "Jon",
+    firstName: "John",
     lastName: "Wage",
     github: "https://github.com/johnwage",
     linkedin: "https://www.linkedin.com/in/johnwage/",

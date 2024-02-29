@@ -186,6 +186,7 @@ const Features = () => {
           {technologyCards.map((technology, index) => (
             <div key={index} className="mx-auto">
               <FeatureCards
+                key={index}
                 index={index}
                 title={technology.title}
                 tech={technology.tech}
