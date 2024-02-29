@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import { XIcon } from "../assets";
 
 const currentYear = new Date().getFullYear();
 
@@ -16,24 +18,16 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-500 font-medium">
               <li className="mb-4">
-                <a href="#" className=" hover:underline">
-                  About
-                </a>
+                <p>About</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Careers
-                </a>
+                <p>Careers</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Brand Center
-                </a>
+                <p>Brand Center</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Blog
-                </a>
+                <p>Blog</p>
               </li>
             </ul>
           </div>
@@ -43,24 +37,16 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-500 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Discord Server
-                </a>
+                <p>Discord Server</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Twitter
-                </a>
+                <p>Twitter</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Facebook
-                </a>
+                <p>Facebook</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Contact Us
-                </a>
+                <p>Contact Us</p>
               </li>
             </ul>
           </div>
@@ -70,24 +56,16 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-500 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  MIT License
-                </a>
+                <p>MIT License</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
+                <p>Privacy Policy</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Licensing
-                </a>
+                <p>Licensing</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Terms &amp; Conditions
-                </a>
+                <p>Terms &amp; Conditions</p>
               </li>
             </ul>
           </div>
@@ -97,24 +75,16 @@ const Footer = () => {
             </h2>
             <ul className="text-gray-500 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  iOS
-                </a>
+                <p>iOS</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Android
-                </a>
+                <p>Android</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Windows
-                </a>
+                <p>Windows</p>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  MacOS
-                </a>
+                <p>MacOS</p>
               </li>
             </ul>
           </div>
@@ -124,8 +94,8 @@ const Footer = () => {
         <div className="px-4 py-6 md:flex items-center justify-center md:justify-between">
           <span className="text-sm text-white sm:text-center p-5">
             ©{currentYear}{" "}
-            <a href="https://app.reactype.dev/#/signup">Reactype™</a>. All
-            Rights Reserved.
+            <a href="https://app.reactype.dev/#/login">Reactype™</a>All Rights
+            Reserved.
           </span>
           <div className="flex mt-4 justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a
@@ -141,6 +111,17 @@ const Footer = () => {
             >
               <LinkedIn />
               <span className="sr-only">LinkedIn account</span>
+            </a>
+            <a
+              href="https://twitter.com/ReacType"
+              className="text-white hover:text-gray-400"
+            >
+              <Image
+                src={XIcon}
+                alt="cube"
+                className="text-white hover:text-gray-400"
+              />
+              <span className="sr-only">X account</span>
             </a>
           </div>
         </div>

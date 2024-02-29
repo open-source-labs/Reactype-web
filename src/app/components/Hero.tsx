@@ -24,7 +24,7 @@ const Hero = () => {
 
           <div className="flex flex-row mt-5">
             <Button
-              href="https://app.reactype.dev/#/signup"
+              href="https://app.reactype.dev/#/login"
               className="blue-button animate-shimmer transition-colors"
               variant="contained"
               sx={{
