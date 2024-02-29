@@ -18,6 +18,7 @@ import ReactypeAppIcon from "./reactype-white-logo-2.png";
 import blueWhiteBackgroundR from "./blue-R-white-bg.png";
 import SFRTLogo from "./SF_RT_LOGO_WHITE_NO_TEXT_2.png";
 import SFRTNoText from "./SF_LOGO_WHITE_NO_TEXT.png";
+import XIcon from "./x.svg";
 
 export {
   reacTypeLogoTwo,
@@ -40,4 +41,5 @@ export {
   blueWhiteBackgroundR,
   SFRTLogo,
   SFRTNoText,
+  XIcon,
 };

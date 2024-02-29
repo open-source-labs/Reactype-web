@@ -14,6 +14,7 @@ import {
   Groups,
   Assignment,
 } from "@mui/icons-material";
+import XIcon from "@mui/icons-material/X";
 
 interface NavigationItem {
   name: string;
@@ -92,6 +93,18 @@ const Navbar = () => {
               <li>
                 <a href="https://www.linkedin.com/company/reactype">
                   <LinkedIn
+                    sx={{
+                      fontSize: "2.5rem",
+                      color: "white",
+                      "&:hover": { color: "#86868b" },
+                    }}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/ReacType">
+                  {/* <Image src={XIcon} alt="cube" /> */}
+                  <XIcon
                     sx={{
                       fontSize: "2.5rem",
                       color: "white",
