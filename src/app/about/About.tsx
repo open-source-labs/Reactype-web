@@ -74,7 +74,7 @@ const About = () => {
             and export React / TypeScript code! our one-stop shop for all things
             React! ReacType is a standalone application built on Electron. It’s
             a powerful prototyping tool, allowing you to initialize React
-            components that can contain various customizable HTML elements
+            components that can contain various customizable HTML elements, Material UI components,
             and/or other components. It provides you with a drag-and-drop canvas
             as well as a demo render to see the result of your actions, and a
             tree graph to see the overall structure of your app at a bird’s eye
