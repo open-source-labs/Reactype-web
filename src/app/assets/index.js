@@ -12,7 +12,7 @@ import bubbleCube from "./bubble-cube.jpg";
 import squareChromeBackground from "./square-chrome-bg.png";
 import whiteLastBackground from "./white-background-footer.jpg";
 import computerRendering from "./reactype-in-comp.png";
-import computerRendering2 from "./TemplateforHompage.png";
+import computerRendering2 from "./TemplateforHompage1.png";
 import RlogoBlue from "./R-logo-blue-large-3.png";
 import ReactypeAppIcon from "./reactype-white-logo-2.png";
 import blueWhiteBackgroundR from "./blue-R-white-bg.png";
