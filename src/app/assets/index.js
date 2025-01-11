@@ -13,6 +13,7 @@ import squareChromeBackground from "./square-chrome-bg.png";
 import whiteLastBackground from "./white-background-footer.jpg";
 import computerRendering from "./reactype-in-comp.png";
 import computerRendering2 from "./TemplateforHompage1.png";
+import v22_computerRendering from "./v22_ComputerView.png";
 import RlogoBlue from "./R-logo-blue-large-3.png";
 import ReactypeAppIcon from "./reactype-white-logo-2.png";
 import blueWhiteBackgroundR from "./blue-R-white-bg.png";
@@ -36,6 +37,7 @@ export {
   whiteLastBackground,
   computerRendering,
   computerRendering2,
+  v22_computerRendering,
   RlogoBlue,
   ReactypeAppIcon,
   blueWhiteBackgroundR,

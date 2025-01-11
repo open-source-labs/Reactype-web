@@ -184,6 +184,12 @@ const people = [
     linkedin: "https://www.linkedin.com/in/austin-orion-alvarez/",
   },
   {
+    firstName: "Ayleen",
+    lastName: " Nazario",
+    github: "https://github.com/ViaLeeny",
+    linkedin: "https://www.linkedin.com/in/ayleen-nazario/",
+  },
+  {
     firstName: "Ben",
     lastName: "Cauffman",
     github: "https://github.com/BenCauffman",
@@ -272,6 +278,12 @@ const people = [
     lastName: "Vazquez",
     github: "https://github.com/diegovazquezny",
     linkedin: "https://www.linkedin.com/in/diegovazquezny/",
+  },
+  {
+    firstName: "Eaming",
+    lastName: "Wu",
+    github: "https://github.com/enigmawun",
+    linkedin: "http://www.linkedin.com/in/eaming",
   },
   {
     firstName: "Edward",
@@ -371,6 +383,12 @@ const people = [
   },
   {
     firstName: "Kevin",
+    lastName: "Chandra",
+    github: "https://github.com/kevinkchandra",
+    linkedin: "https://www.linkedin.com/in/kevin-chandra/",
+  },
+  {
+    firstName: "Kevin",
     lastName: "Park",
     github: "https://github.com/xkevinpark",
     linkedin: "https://www.linkedin.com/in/xkevinpark/",
@@ -442,6 +460,12 @@ const people = [
     linkedin: "https://www.linkedin.com/in/vicknatalie/",
   },
   {
+    firstName: "Noah",
+    lastName: "Favelo",
+    github: "https://github.com/noahFavelo",
+    linkedin: "https://www.linkedin.com/in/noah-favelo-7a3277289//",
+  },
+  {
     firstName: "Philip ",
     lastName: "Hua",
     github: "https://github.com/pmhua",
@@ -506,6 +530,12 @@ const people = [
     lastName: "Porges",
     github: "https://github.com/ShlomoPorges",
     linkedin: "https://linkedin.com/shlomoporges",
+  },
+  {
+    firstName: "Spencer",
+    lastName: "Lau",
+    github: "https://github.com/Spencer-Lau",
+    linkedin: "http://www.linkedin.com/in/spencerlau/",
   },
   {
     firstName: "Stephen",
